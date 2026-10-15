@@ -1,28 +1,27 @@
 {
-  "status": "PASS_RELEASE_VALIDATION",
-  "date_local": "2026-10-15",
-  "python": "3.12.3 (tags/v3.12.3:f6650f9, Apr  9 2024, 14:05:25) [MSC v.1938 64 bit (AMD64)]",
-  "packages": {
-    "numpy": "2.4.4",
-    "matplotlib": "3.11.2",
-    "pytest": "8.3.4"
-  },
-  "statistics_self_tests": {
-    "passed": 10,
-    "failed": 0
-  },
-  "leveling_tests": {
-    "passed": 4,
-    "failed": 0
-  },
-  "python_files_syntax_parsed": 64,
-  "frozen_ridge_coefficients": 74,
-  "csv_tables_reproduced": 12,
-  "csv_cells_compared": 279760,
-  "maximum_csv_absolute_error": 0.0,
-  "visual_review": "Regenerated Ridge-vs-fixed-H simultaneous-interval PNG inspected; labels, intervals and zero reference readable",
-  "new_trajectories": 0,
-  "new_fits": 0,
-  "credential_pattern_scan": "No matches in selected text files; no environment/credential files included",
-  "files_at_or_above_50_mib": []
+  "status": "PASS_TWO_NOISE_FAMILY_RELEASE",
+  "active_noise_families": [
+    "subset_shuffle",
+    "time_window_shuffle"
+  ],
+  "clean_separate": true,
+  "conditions": 15,
+  "complete_rows": 10800,
+  "synthetic_statistical_tests_passed": 10,
+  "pytest_tests_passed": 8,
+  "smoke_fresh_trajectories": 216,
+  "full_fresh_trajectories": 10800,
+  "full_run_elapsed_seconds": 208.8289999999979,
+  "deterministic_fields_verified": 194400,
+  "trajectory_mismatches": 0,
+  "csv_tables_compared": 12,
+  "csv_cells_compared": 204880,
+  "max_csv_absolute_error": 0.0,
+  "physical_steps_independently_replayed": 345526,
+  "relative_document_links_verified": 74,
+  "python_files_syntax_verified": 80,
+  "original_models_refit_or_reselected": false,
+  "runtime_requires_original_workspace": false,
+  "previous_scope_data_and_results_retained_locally": true,
+  "visual_review": "Two-family family facets inspected: exactly two panels and no excluded family"
 }

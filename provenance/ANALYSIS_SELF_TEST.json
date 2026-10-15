@@ -1,0 +1,13 @@
+{
+  "actual_exit_code": 0,
+  "command": "baselines/_snapshot/R/experiments/fixed_horizon_analysis.py --self-test --receipt-out provenance/ANALYSIS_SELF_TEST.json",
+  "elapsed_seconds": 7.081671300002199,
+  "failed": 0,
+  "fit_or_tuning": false,
+  "real_data_read": false,
+  "real_trajectory_count": 0,
+  "status": "PASS",
+  "synthetic_rows_checked": 10800,
+  "test_count": 10,
+  "tests_passed": 10
+}

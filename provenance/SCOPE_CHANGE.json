@@ -1,0 +1,15 @@
+{
+  "date_local": "2026-10-15",
+  "active_noise_families": [
+    "subset_shuffle",
+    "time_window_shuffle"
+  ],
+  "clean_separate": true,
+  "conditions": 15,
+  "reference_rows": 10800,
+  "prior_scope_results_retained_locally": true,
+  "prior_scope_archive_manifest_sha256": "d30dfdf134b6e258bb8c87467e6757feba133beafa3066a1100bcface4f2fa83",
+  "model_refit_or_reselection": false,
+  "historical_source_observations_filtered_only": true,
+  "macro_statistics_must_be_recomputed": true
+}

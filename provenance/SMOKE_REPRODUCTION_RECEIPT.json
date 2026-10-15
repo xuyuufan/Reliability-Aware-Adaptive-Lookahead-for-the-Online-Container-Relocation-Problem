@@ -1,0 +1,23 @@
+{
+  "scope": "smoke",
+  "expected_rows": 216,
+  "workers": 1,
+  "inputs": {
+    "manifest_sha256": "1c0d45957c4a8f6aa18da8dca288cb6865b01bbf154afd8998f537546cbb2758",
+    "files_verified": 79
+  },
+  "new_fits": 0,
+  "new_model_selections": 0,
+  "new_per_step_traces": true,
+  "status": "PASS_PARTIAL_TRAJECTORY_REPRODUCTION",
+  "new_trajectories": 216,
+  "elapsed_seconds": 36.2190000000046,
+  "raw_sha256": "95339aacdf17acff60aad267a1e660768e7283e3440fe37196346d6fb6831093",
+  "comparison": {
+    "trajectory_rows_verified": 216,
+    "fields_per_row": 18,
+    "total_fields_verified": 3888,
+    "deterministic_mismatches": 0
+  },
+  "analysis_executed": false
+}

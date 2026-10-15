@@ -1,0 +1,36 @@
+{
+  "protocol": "ridge_two_noise_families_reproduction_v1",
+  "algorithms": [
+    "EM",
+    "GP",
+    "ERI",
+    "EG",
+    "Chain",
+    "Minmax"
+  ],
+  "methods": [
+    "RIDGE",
+    "FIXED_H0",
+    "FIXED_H2",
+    "FIXED_H5",
+    "FIXED_H10",
+    "FIXED_H20"
+  ],
+  "full_layouts": 20,
+  "full_conditions": 15,
+  "full_rows": 10800,
+  "smoke_layouts_per_geometry": 1,
+  "smoke_condition_ids": [
+    "subset_shuffle|p=0.3|r=0",
+    "time_window_shuffle|B=5|r=0",
+    "CLEAN"
+  ],
+  "smoke_rows": 216,
+  "single_trajectory_cap_seconds": 30,
+  "default_wall_cap_seconds": 7200,
+  "training_or_model_selection": false,
+  "noise_families": [
+    "subset_shuffle",
+    "time_window_shuffle"
+  ]
+}

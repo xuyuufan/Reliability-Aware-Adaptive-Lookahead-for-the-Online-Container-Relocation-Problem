@@ -1,63 +1,68 @@
 # Reliability-Aware Adaptive Lookahead for Online Container Relocation
 
-Ridge-R selects among solver proposals at horizons **H = 0, 2, 5, 10, 20** using a frozen 74-coefficient Ridge scorer. This repository contains the necessary implementation snapshot, experimental data, statistical results, and figures for six solvers: **EM, GP, ERI, EG, Chain, and Minmax**. Leveling is included separately as a forecast-independent baseline.
+Ridge-R selects among solver proposals at horizons **H = 0, 2, 5, 10, 20** with a frozen 74-coefficient Ridge scorer. This release includes six solver implementations, a separate Leveling baseline, input layouts, complete trajectory data, and portable experiment and statistics entrypoints.
 
-## Results and scope
+The current evaluation covers **subset_shuffle** and **time_window_shuffle**, with **CLEAN reported separately**: 20 exposed development layouts, 15 conditions, six solvers, six policy slots, and **10,800 trajectories**. Previous-scope data and results were moved out of the current release and preserved locally. The frozen model is unchanged; all macro statistics and figures have been recomputed for the current scope.
 
-The fixed-horizon comparison uses **20 exposed development layouts**, two geometries with 10 layouts each, **21 conditions**, and **15,120 complete trajectory rows**. The three noise families are subset shuffle, delayed positions, and time-window shuffle; CLEAN is reported separately. Inference uses 100,000 shared geometry-stratified paired bootstrap draws and simultaneous intervals for 35 registered primary comparisons.
+## Find the code and data
 
-- The equal-six-solver noisy macro comparison supports Ridge over all five fixed horizons; its H20 improvement is **3.221%**, with simultaneous interval **[0.877%, 5.402%]**.
-- Of 30 individual solver–horizon comparisons, 24 support Ridge and 6 remain unresolved. Only **EG and Minmax** support Ridge over all five horizons.
-- **CLEAN is negative for all six solvers at H20**: Ridge increases relocations by 5.09%–11.09%. Delayed-position H20 point estimates are negative for five solvers.
-- These are development-set results. Independent confirmation, sealed evaluation, OOD generalization, and deployment benefit are not established.
-
-Read the [accepted results report](experiments/fixed_horizon_baselines_v1/r01/OUT/FINAL_REPORT.md) and [final acceptance receipt](experiments/fixed_horizon_baselines_v1/r01/OUT/FINAL_ACCEPTANCE.json). Historical report wording about pending acceptance is superseded by that receipt, whose status is `PASS_ROOT_FINAL_ACCEPTANCE`.
-
-![Ridge vs fixed horizons](experiments/fixed_horizon_baselines_v1/r01/analysis/RIDGE_VS_FIXED_H_SIMULTANEOUS.png)
-
-## Contents
-
-| Path | Purpose |
+| Directory | Contents |
 |---|---|
-| `R/scrp/` | Compact Ridge-only scorer/selection adapter; callers supply solver proposer callbacks |
-| `Ridge_R_analysis/` | Frozen Ridge model, original Ridge-vs-NATIVE20 summaries, plotting script, PNG/PDF figures |
-| `experiments/fixed_horizon_baselines_v1/r01/workspace/` | Frozen runtime sources and input layouts used by the fixed-horizon experiment; solver implementations are under `EM`, `GP`, `R`, `Chain`, and `Minmax` |
-| `experiments/fixed_horizon_baselines_v1/r01/analysis/` | Merged trajectory data, tables, plot data, reports, and figures |
-| `experiments/fixed_horizon_baselines_v1/r01/bank/` | Accepted fixed-horizon raw rows and compressed decision/physics/evaluator traces |
-| `experiments/fixed_horizon_baselines_v1/r01/smoke/`, `bridge/` | Accepted smoke and bridge data with validation receipts |
-| `Leveling/` | Standalone implementation and the 840-instance Caserta benchmark |
-| `tools/reproduce_results.py` | Portable reanalysis of the included merged data and comparison with archived tables |
-| `provenance/` | Release hash manifest, selection record, validation receipt, and excluded-file inventory |
+| [baselines/](baselines/) | Visible EM, GP, ERI, EG, Chain, Minmax and Leveling entrypoints, with links to the actual implementations |
+| [baselines/_snapshot/](baselines/_snapshot/) | Single source copy used by the runner; solver/policy implementations preserve their original bytes, and the statistical registration is adapted to the current two-family scope |
+| [models/](models/) | Frozen Ridge coefficients and accepted GP expression/tree |
+| [data/](data/) | 20 layouts, 10,800 reference trajectories, and the separate Caserta benchmark entry |
+| [configs/](configs/) | Current two-family experiment matrix and execution limits |
+| [reproduction/](reproduction/) | Portable runtime, simulation runner, reporting, and relative-path input hashes |
+| [results/](results/) | Current-scope result tables, PNG/PDF figures, report, and reproduced execution evidence |
+| [provenance/](provenance/) | Validation receipts, current file hashes and release handoff |
 
-The frozen runtime includes shared compatibility modules referenced by the accepted runner, even where they contain historical alternative-policy branches. It is a dependency snapshot, not an invitation to interpret those branches as additional reproduced results. GP inference inputs are retained; the earlier GP training pipeline and neural training checkpoints are outside this release.
+The visible baseline packages call the shared source snapshot. For example:
 
-## Reproduce the statistical results
+```python
+from baselines.EM import make_policy
+actor = make_policy("RIDGE")  # or FIXED_H0/2/5/10/20
+# action, trace = actor.select(public_frame)
+```
 
-From the repository root, with Python 3.12:
+## Run the complete experiment
+
+Tested with Python 3.12. CPU execution is sufficient.
+
+```powershell
+py -3 -m pip install -r requirements-experiments.txt
+py -3 -B tools/reproduce_experiments.py --preflight --scope full
+py -3 -B tools/reproduce_experiments.py --scope smoke --workers 4 --output-dir runs/smoke
+py -3 -B tools/reproduce_experiments.py --scope full --workers 4 --output-dir runs/full --analyze
+```
+
+Smoke executes **216 fresh trajectories**. Full scope executes **10,800 fresh trajectories**, checks 18 deterministic fields per row against the included reference data, and then reconstructs all 12 result/plot-data CSVs and four PNG/PDF figure pairs. It uses the same forecast within each layout-condition cell and performs no fitting or model selection. The output directory must be new.
+
+For statistics and figures using the included data without simulation:
 
 ```powershell
 py -3 -m pip install -r requirements.txt
-py -3 -B tools/reproduce_results.py
+py -3 -B tools/reproduce_results.py --output-dir reproduced
 ```
 
-This checks frozen input hashes, validates the complete paired matrix, regenerates all 12 result/plot-data CSVs and four PNG/PDF figure pairs, and compares every CSV cell to the archived results. Outputs go to `reproduced/`; the accepted files remain unchanged. It performs reanalysis only, without new trajectories or fitting. The portable script calls the byte-preserved analyzer's statistical functions; it does not invoke or change the historical stage-release gates.
+See [complete reproduction instructions](docs/REPRODUCTION.md) for virtual environments, dependencies, individual-solver commands, traces, execution limits, failure handling, and output receipts. Historical release approvals are not required for this portable rerun.
 
-The original Ridge-vs-NATIVE20 figures use earlier 10,000-draw confidence intervals. They are a separate historical analysis and must not be confused with the 100,000-draw simultaneous fixed-horizon comparison.
+## Current results and limits
+
+[The two-family report](results/two_noise_families/FINAL_REPORT.md) and [all tables](results/two_noise_families/) retain both positive and negative outcomes. For the noisy equal-six macro, Ridge improves over H20 by **5.486%**, with a 35-comparison simultaneous interval of **[2.827%, 8.168%]**. Of 30 individual solver–horizon comparisons, 29 support Ridge and one remains unresolved.
+
+**CLEAN remains negative for all six solvers at H20**: Ridge increases relocations by 5.09%–11.09%. The scope was revised after the earlier results were available; the recomputed figures are development evidence rather than a newly preregistered or independently confirmed study. No sealed/OOD generalization or deployment benefit is established.
+
+![Ridge vs fixed horizons](results/two_noise_families/RIDGE_VS_FIXED_H_SIMULTANEOUS.png)
+
+Leveling is forecast-independent and is evaluated separately on the included 840-instance Caserta benchmark:
 
 ```powershell
-py -3 -B Ridge_R_analysis/figures/gen_fig_ridge_six_solver_three_noise_families.py
-py -3 -B -m pytest -q Leveling/tests
-py -3 -B experiments/fixed_horizon_baselines_v1/r01/workspace/R/experiments/fixed_horizon_analysis.py --self-test
+py -3 -B baselines/Leveling/evaluate_caserta.py --output-dir runs/leveling-caserta
 ```
 
-## Provenance and reproduction limits
+## Attribution and preservation
 
-The original experiment runner and its frozen dependencies are retained for inspection. Its historical release-gated commands bind absolute source paths and omitted preparation archives; **a fresh full trajectory-bank rerun is not supported by this curated release**. Statistical reanalysis and figure regeneration from the supplied data are supported and verified. Root `R/scrp/ridge_policy.py` is a reusable adapter, not a complete bank runner.
+The Minmax snapshot includes the original upstream C++ source, [GPL-2-or-later terms](baselines/_snapshot/Minmax/COPYING), and [source provenance](baselines/_snapshot/Minmax/SOURCE_PROVENANCE.md). Chain's source interpretation is recorded in its [provenance](baselines/Chain/SOURCE_PROVENANCE.md). Those upstream terms do not assign a blanket license to unrelated files. The compact root `R/scrp/` export is retained for Ridge adapter reuse; the unified baseline API is the supported experiment entrypoint.
 
-Compressed directories named `private` contain evaluator-only simulation truth/physics used in trace audits. They are published as experiment evidence; they are not actor inputs. The archival receipts retain their original paths and hash references. Some references point to preparation history deliberately kept local. [RELEASE_MANIFEST.csv](provenance/RELEASE_MANIFEST.csv) is the current release inventory; the older manifests under `provenance/` describe their original packages.
-
-Failed engineering attempts are recorded in the accepted report and process ledger; their duplicate workspaces and raw logs are excluded. Scientific negative/unresolved results are retained. The original local research bundle was not modified.
-
-## Third-party attribution
-
-The Minmax source snapshot retains the upstream C++ source, [GPL-2-or-later terms](experiments/fixed_horizon_baselines_v1/r01/workspace/Minmax/COPYING), and [source provenance](experiments/fixed_horizon_baselines_v1/r01/workspace/Minmax/SOURCE_PROVENANCE.md). These terms apply to the upstream source as stated in its header. This release does not assign a blanket license to unrelated files.
+The original local research bundle and the previous-scope publication archive remain preserved. Current input and release inventories are [INPUT_MANIFEST.json](reproduction/INPUT_MANIFEST.json) and [RELEASE_MANIFEST.csv](provenance/RELEASE_MANIFEST.csv).

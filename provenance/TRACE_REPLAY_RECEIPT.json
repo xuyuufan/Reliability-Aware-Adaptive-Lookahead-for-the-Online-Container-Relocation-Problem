@@ -1,0 +1,12 @@
+{
+  "status": "PASS_INDEPENDENT_PHYSICAL_TRACE_REPLAY",
+  "trajectories_verified": 10800,
+  "physical_steps_verified": 345526,
+  "public_private_pairing_verified": true,
+  "allowed_families_only": [
+    "CLEAN",
+    "subset_shuffle",
+    "time_window_shuffle"
+  ],
+  "raw_sha256": "b7f56f23a689482a2cf75f037969be46d7a6e6a8a1b60f387f2c6a199144bd93"
+}

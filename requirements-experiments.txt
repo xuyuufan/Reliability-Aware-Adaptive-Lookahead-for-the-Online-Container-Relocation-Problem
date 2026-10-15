@@ -1,0 +1,5 @@
+# Tested runtime for the frozen trajectory experiment. CPU execution is sufficient.
+-r requirements.txt
+numba==0.67.0
+scipy==1.17.1
+torch==2.13.0

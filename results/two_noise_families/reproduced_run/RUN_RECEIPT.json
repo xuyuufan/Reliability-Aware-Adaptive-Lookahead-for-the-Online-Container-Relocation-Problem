@@ -1,0 +1,24 @@
+{
+  "scope": "full",
+  "expected_rows": 10800,
+  "workers": 4,
+  "inputs": {
+    "manifest_sha256": "1c0d45957c4a8f6aa18da8dca288cb6865b01bbf154afd8998f537546cbb2758",
+    "files_verified": 79
+  },
+  "new_fits": 0,
+  "new_model_selections": 0,
+  "new_per_step_traces": true,
+  "status": "PASS_FULL_EXPERIMENT_REPRODUCTION",
+  "new_trajectories": 10800,
+  "elapsed_seconds": 208.8289999999979,
+  "raw_sha256": "b7f56f23a689482a2cf75f037969be46d7a6e6a8a1b60f387f2c6a199144bd93",
+  "comparison": {
+    "trajectory_rows_verified": 10800,
+    "fields_per_row": 18,
+    "total_fields_verified": 194400,
+    "deterministic_mismatches": 0
+  },
+  "analysis_executed": true,
+  "analysis_receipt_sha256": "54b717d73cf8979451d9ce440a505e69227d8b873ed188e467119efb8b8b3b39"
+}

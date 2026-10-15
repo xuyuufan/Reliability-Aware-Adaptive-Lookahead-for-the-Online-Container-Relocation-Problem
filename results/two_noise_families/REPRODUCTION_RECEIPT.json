@@ -1,0 +1,16 @@
+{
+  "status": "PASS_PUBLISHED_DATA_REANALYSIS",
+  "new_trajectories": 0,
+  "new_fits": 0,
+  "merged_rows": 10800,
+  "forecast_pairs": 300,
+  "bootstrap_replicates": 100000,
+  "bootstrap_seed": 202610155301,
+  "elapsed_seconds": 17.21471140000358,
+  "csv_comparisons": {},
+  "figure_pairs_generated": 4,
+  "formal_stage_acceptance": false,
+  "input_sha256": "a892558c90fb0cce35b8c9ef527cf08cad78f97889fe110fa004ff6e39761668",
+  "input_origin": "published_two_family_reference",
+  "compared_to_published_tables": false
+}

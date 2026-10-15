@@ -1,10 +1,12 @@
-# GitHub 发布交接
+# 当前发布交接
 
 - 仓库：https://github.com/xuyuufan/Reliability-Aware-Adaptive-Lookahead-for-the-Online-Container-Relocation-Problem
 - 本地发布目录：D:/DSAI/PAPER_CODE_RIDGE_BUNDLE/github_release
-- 保留：Ridge 适配器与 74 系数模型、六算法实验依赖快照、20 布局、15,120 条合并轨迹、正式 trace、结果表与 PNG/PDF、Leveling 和 840 Caserta 实例、最终验收与必要来源记录。
-- 筛除：多轮 preparation/history、重复过程日志、重复算法导出和过期交接页。所有筛除文件仍留在原目录，清单见 EXCLUDED_FILES.csv。
-- 验证：10 项统计 self-test、4 项 Leveling 测试通过；12 张 CSV 共 279,760 个单元格重生成对照一致，最大数值误差 0；四组 PNG/PDF 重生成成功。没有新实验或拟合。
-- 当前发布哈希入口：RELEASE_MANIFEST.csv；原历史索引可能引用未上传材料，不能替代当前发布清单。
-- 复现命令：在发布根目录执行 py -3 -B tools/reproduce_results.py，生成目录为 reproduced/（不提交）。
-- 边界：可从已有数据复现统计与图；不提供完整历史 bank 的便携端到端重跑。CLEAN 负结果、无法区分结果及开发布局限制完整保留。
+- 当前范围：subset_shuffle、time_window_shuffle；CLEAN 单列。20 布局、15 条件、六算法 × 六策略，共 10,800 条轨迹。
+- 算法入口：baselines/ 下可见 EM、GP、ERI、EG、Chain、Minmax、Leveling。实际共享实现位于 baselines/_snapshot/，冻结模型位于 models/。
+- 完整命令：py -3 -B tools/reproduce_experiments.py --scope full --workers 4 --output-dir runs/full --analyze
+- 已执行验证：独立复制目录中完整重跑 10,800 条；194,400 个确定性字段一致；12 张 CSV 共 204,880 单元格完全一致；345,526 个物理步骤独立回放通过。216 条 smoke、10 项统计 synthetic test、8 项 pytest 通过。
+- 结果与 trace：results/two_noise_families/；新 bank、public trace、evaluator physics trace 位于 reproduced_run/。
+- 当前清单：provenance/RELEASE_MANIFEST.csv；运行输入绑定：reproduction/INPUT_MANIFEST.json。
+- Delay 历史数据与旧结果已移出当前发布文件，本地归档：D:/DSAI/PAPER_CODE_RIDGE_BUNDLE/publication_archives/20261015_before_two_noise_scope。原始本地研究包保留。此前的三族重跑因用户调整范围已停止，其部分文件保留在 validation_tmp/independent_checkout/runs/full-verified/，不作为验收结果。
+- 边界：仅复现冻结模型在当前两族与 CLEAN 的开发集实验；没有新训练、模型选择、独立确认或 OOD 测试。CLEAN 负结果及未分辨比较仍保留。

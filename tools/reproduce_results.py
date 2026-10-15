@@ -3,7 +3,6 @@ from __future__ import annotations
 
 import argparse
 import csv
-import hashlib
 import json
 import math
 import sys
@@ -11,13 +10,13 @@ import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-RUN = ROOT / "experiments/fixed_horizon_baselines_v1/r01"
-WORKSPACE = RUN / "workspace"
+RUN = ROOT / "results/two_noise_families"
+WORKSPACE = ROOT / "baselines/_snapshot"
+sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(WORKSPACE))
 from R.experiments import fixed_horizon_analysis as a
 
 INPUT_HASHES = {
-    RUN / "analysis/MERGED_RAW_TRAJECTORIES.csv": "eb0ecc87c90a50cd7fb62b2fc0466babdc28ab9342151d7c804f8ca11977b906",
     a.LAYOUT_PATH: "62f9e205f2df0197260629f4b9ad54a35a412c6ab16838709b0a26d224ecf426",
 }
 
@@ -50,6 +49,9 @@ def compare_csv(actual: Path, expected: Path) -> tuple[int, float]:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output-dir", type=Path, default=ROOT / "reproduced")
+    parser.add_argument("--input", type=Path, default=ROOT / "data/reference_trajectories.csv",
+                        help="complete merged bank: published input or a fresh 10,800-row rerun")
+    parser.add_argument("--publish-reference", action="store_true", help="create the two-family reference analysis without a previous-table comparison")
     args = parser.parse_args()
     target = args.output_dir.resolve()
     if target.exists():
@@ -58,7 +60,8 @@ def main() -> int:
         if a._sha256_file(path) != expected:
             raise ValueError(f"Frozen input SHA-256 mismatch: {path}")
     start = time.perf_counter()
-    bank = a.validate_rows(a._read_csv(a.EXPECTED_INPUT), a.load_layout_registry())
+    input_path = args.input.resolve()
+    bank = a.validate_rows(a._read_csv(input_path), a.load_layout_registry())
     raw, rn = a.scope_layout_values(bank.raw), a.scope_layout_values(bank.rn)
     indices = a.make_bootstrap_indices(
         bank.layouts, bank.geometry_by_layout, replicates=a.BOOTSTRAP_REPLICATES,
@@ -79,22 +82,23 @@ def main() -> int:
     target.mkdir(parents=True)
     names = a._write_analysis_outputs(
         target, bank, raw, rn, boots, primary, overall, fixed, best, curves,
-        input_sha256=a._sha256_file(a.EXPECTED_INPUT), analyzer_sha256=a._sha256_file(a.SCRIPT),
+        input_sha256=a._sha256_file(input_path), analyzer_sha256=a._sha256_file(a.SCRIPT),
         replicates=a.BOOTSTRAP_REPLICATES,
     )
     comparisons = {}
     for name in names:
-        if name.endswith(".csv"):
-            fields, error = compare_csv(target / name, RUN / "analysis" / name)
+        if name.endswith(".csv") and not args.publish_reference:
+            fields, error = compare_csv(target / name, RUN / name)
             comparisons[name] = {"cells_compared": fields, "max_absolute_error": error}
-    # The historical report describes formal stage gates. Reanalysis is recorded separately.
-    (target / "FINAL_REPORT.md").unlink()
     receipt = {
         "status": "PASS_PUBLISHED_DATA_REANALYSIS", "new_trajectories": 0, "new_fits": 0,
         "merged_rows": a.EXPECTED_ROWS, "forecast_pairs": bank.forecast_pair_count,
         "bootstrap_replicates": a.BOOTSTRAP_REPLICATES, "bootstrap_seed": a.BOOTSTRAP_SEED,
         "elapsed_seconds": time.perf_counter()-start, "csv_comparisons": comparisons,
         "figure_pairs_generated": 4, "formal_stage_acceptance": False,
+        "input_sha256": a._sha256_file(input_path),
+        "input_origin": "published_two_family_reference" if input_path == (ROOT / "data/reference_trajectories.csv").resolve() else "fresh_complete_bank",
+        "compared_to_published_tables": not args.publish_reference,
     }
     (target / "REPRODUCTION_RECEIPT.json").write_text(json.dumps(receipt, indent=2)+"\n", encoding="utf-8")
     print(json.dumps(receipt, indent=2))

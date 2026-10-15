@@ -1,0 +1,65 @@
+{
+  "status": "PASS_PUBLISHED_DATA_REANALYSIS",
+  "new_trajectories": 0,
+  "new_fits": 0,
+  "merged_rows": 10800,
+  "forecast_pairs": 300,
+  "bootstrap_replicates": 100000,
+  "bootstrap_seed": 202610155301,
+  "elapsed_seconds": 19.522395200001483,
+  "csv_comparisons": {
+    "LAYOUT_AGGREGATES.csv": {
+      "cells_compared": 164160,
+      "max_absolute_error": 0.0
+    },
+    "RIDGE_VS_FIXED_H_MACRO.csv": {
+      "cells_compared": 600,
+      "max_absolute_error": 0.0
+    },
+    "OVERALL_EQUAL6_RESULTS.csv": {
+      "cells_compared": 95,
+      "max_absolute_error": 0.0
+    },
+    "FIXED_H_VS_H20.csv": {
+      "cells_compared": 1008,
+      "max_absolute_error": 0.0
+    },
+    "FAMILY_RESULTS.csv": {
+      "cells_compared": 3600,
+      "max_absolute_error": 0.0
+    },
+    "CONDITION_RESULTS.csv": {
+      "cells_compared": 27000,
+      "max_absolute_error": 0.0
+    },
+    "CLEAN_RESULTS.csv": {
+      "cells_compared": 1800,
+      "max_absolute_error": 0.0
+    },
+    "DEVELOPMENT_BEST_FIXED_H.csv": {
+      "cells_compared": 77,
+      "max_absolute_error": 0.0
+    },
+    "PLOT_DATA_FIXED_H_RRAW.csv": {
+      "cells_compared": 540,
+      "max_absolute_error": 0.0
+    },
+    "PLOT_DATA_RIDGE_VS_FIXED_H.csv": {
+      "cells_compared": 600,
+      "max_absolute_error": 0.0
+    },
+    "PLOT_DATA_FAMILIES.csv": {
+      "cells_compared": 3600,
+      "max_absolute_error": 0.0
+    },
+    "PLOT_DATA_CLEAN.csv": {
+      "cells_compared": 1800,
+      "max_absolute_error": 0.0
+    }
+  },
+  "figure_pairs_generated": 4,
+  "formal_stage_acceptance": false,
+  "input_sha256": "b7f56f23a689482a2cf75f037969be46d7a6e6a8a1b60f387f2c6a199144bd93",
+  "input_origin": "fresh_complete_bank",
+  "compared_to_published_tables": true
+}

@@ -1,0 +1,1344 @@
+{
+  "schema": "fixed_horizon_artifact_hash_index_v1",
+  "protocol_id": "ridge_fixed_horizon_baselines_v1",
+  "run_id": "r01",
+  "index_status": "READY_FOR_ROOT_FINAL_ACCEPTANCE",
+  "generated_at_utc": "2026-10-15T01:28:40Z",
+  "root_run_directory": "D:\\DSAI\\PAPER_CODE_RIDGE_BUNDLE\\experiments\\fixed_horizon_baselines_v1\\r01",
+  "frozen_binding": {
+    "revision": "M0_REV05",
+    "canonical_sha256": "f16f483abae18010e3f1f2b9f32c64f54f198926ddcf92d96015fb81acf5ed97",
+    "file_sha256": "3ac525573c1d82556954bdef21d65162c1ead701fee184fb5d44fd38c54d5e44",
+    "plan_sha256": "b9ed06aeeecf921d4a9b80e308e792a57aaf0626ed83d90f1214fe51d52f5f86",
+    "package_manifest_sha256": "f03d2cd859d88cea8db9c1721a4bf937b0587d617b2e97439d0a65fc8ab211ee",
+    "original_sources_count": 69,
+    "local_sources_count": 24,
+    "runtime_copies_count": 56,
+    "frozen_inputs_count": 180,
+    "package_targets_count": 87
+  },
+  "trajectory_accounting": {
+    "accepted_protocol_executions": 10104,
+    "historical_engineering_executions_not_accepted": 360,
+    "all_science_executions_including_discarded": 10464,
+    "M1_bridge_new_executions": 24,
+    "M1_smoke_new_executions_counted_once": 96,
+    "M2_new_fixed_h_executions": 9984,
+    "M2_bank_rows": 10080,
+    "M2_exact_smoke_reuse_rows_not_new_executions": 96,
+    "M0_historical_reuse_rows_not_new_executions": 5040,
+    "merged_rows": 15120,
+    "M2_audited_trajectories": 10080,
+    "M2_audited_steps": 325842
+  },
+  "budget_summary": {
+    "science_used_seconds": 1250.5031525999984,
+    "science_cap_seconds": 7200,
+    "audit_used_seconds": 481.8519064999945,
+    "audit_cap_seconds": 7200,
+    "analysis_used_seconds": 414.064615,
+    "analysis_cap_seconds": 1800,
+    "analysis_remaining_seconds": 1385.935385
+  },
+  "review_status": {
+    "m0": "PASS_ROOT_M0",
+    "m1": "PASS_ROOT_M1",
+    "m2": "PASS_ROOT_M2",
+    "merge": "PASS_ROOT_MERGE",
+    "m3": "PASS_ROOT_M3_STATISTICS_AND_VISUAL_REVIEW",
+    "figure": "PASS_ROOT_FIGURE_REVIEW",
+    "final_report": "PASS_ROOT_FINAL_REPORT_CONTENT",
+    "m3_main_comparisons": 35,
+    "independently_checked_numeric_fields": 56405,
+    "maximum_absolute_error": 6.217248937900877E-14,
+    "bootstrap_replicates": 100000,
+    "equal6_supported_all_five_common_h": true,
+    "individually_supported_all_five_h": [
+      "EG",
+      "Minmax"
+    ],
+    "pngs_visually_inspected": 4,
+    "pdfs_checked": 1
+  },
+  "final_report": {
+    "path": "OUT/FINAL_REPORT.md",
+    "sha256": "96bc5de92d33fdfcffaaeda6aa7bd9ae665de10dc9d43a435ce3cd59e9b185f8",
+    "status": "PASS_ROOT_FINAL_REPORT_CONTENT",
+    "analysis_stage_draft_path": "analysis/FINAL_REPORT.md",
+    "analysis_stage_draft_sha256": "f7d8515c3a9e5ee0c986ebf0c154d66a2fb9942f43266d547b762c6649f06726"
+  },
+  "final_acceptance": {
+    "path": "OUT/FINAL_ACCEPTANCE.json",
+    "status": "PENDING_ROOT",
+    "sha256_included": false
+  },
+  "self_hash_included": false,
+  "final_acceptance_hash_included": false,
+  "excluded_from_index_hash": [
+    "OUT/ARTIFACT_HASH_INDEX.json (this file; no self-hash)",
+    "OUT/FINAL_ACCEPTANCE.json (pending ROOT; no acceptance hash included)"
+  ],
+  "artifact_count": 180,
+  "artifacts": [
+    {
+      "path": "D:\\DSAI\\PAPER_CODE_RIDGE_BUNDLE\\docs\\planning\\PLAN_FIXED_HORIZON_BASELINES.md",
+      "category": "protocol",
+      "role": "Authorized frozen M0-M3 experiment plan",
+      "size_bytes": 18372,
+      "sha256": "b9ed06aeeecf921d4a9b80e308e792a57aaf0626ed83d90f1214fe51d52f5f86"
+    },
+    {
+      "path": "D:\\DSAI\\PAPER_CODE_RIDGE_BUNDLE\\PAPER_CODE_MANIFEST.csv",
+      "category": "frozen_package_manifest",
+      "role": "Original packaged target manifest; preserved unchanged",
+      "size_bytes": 30416,
+      "sha256": "f03d2cd859d88cea8db9c1721a4bf937b0587d617b2e97439d0a65fc8ab211ee"
+    },
+    {
+      "path": "run_fixed_horizon_stage.ps1",
+      "category": "protocol_or_review",
+      "role": "Run provenance, frozen binding, or reviewed handoff evidence",
+      "size_bytes": 518,
+      "sha256": "95153d109aeb00dc023fa3fe072bc532143a77f00770104734d74d766b747c2c"
+    },
+    {
+      "path": "ROOT_USER_AUTHORIZATION.json",
+      "category": "protocol_or_review",
+      "role": "Run provenance, frozen binding, or reviewed handoff evidence",
+      "size_bytes": 1212,
+      "sha256": "952c2fbfc4bf3a081e34f8eff6be84d1d873dc42fc586fdd3e2f767319a2b5e1"
+    },
+    {
+      "path": "ROOT_M0_REVIEW.json",
+      "category": "protocol_or_review",
+      "role": "Run provenance, frozen binding, or reviewed handoff evidence",
+      "size_bytes": 1416,
+      "sha256": "fd770c52d7ccf9d66c477ac67d104b0c8eeff925a629ca245824dcdbc464705b"
+    },
+    {
+      "path": "ROOT_M1_BRIDGE_SMOKE_RELEASE.json",
+      "category": "protocol_or_review",
+      "role": "Run provenance, frozen binding, or reviewed handoff evidence",
+      "size_bytes": 1478,
+      "sha256": "b2199f7f496bfaaad88d77781713f7d6fbdb74510727abdb6311b2884a054e41"
+    },
+    {
+      "path": "ROOT_M1_REVIEW.json",
+      "category": "protocol_or_review",
+      "role": "Run provenance, frozen binding, or reviewed handoff evidence",
+      "size_bytes": 839,
+      "sha256": "78b3ddd07ed2bf30fa494b15b85e1669bc6906fd8007f86bd32699cd299b3fac"
+    },
+    {
+      "path": "ROOT_M2_BANK_RELEASE.json",
+      "category": "protocol_or_review",
+      "role": "Run provenance, frozen binding, or reviewed handoff evidence",
+      "size_bytes": 1855,
+      "sha256": "1c303a870179b9703fadb9117b3a4dc9b50237d3679dd65e6d112092a887c4f9"
+    },
+    {
+      "path": "ROOT_M2_REVIEW.json",
+      "category": "protocol_or_review",
+      "role": "Run provenance, frozen binding, or reviewed handoff evidence",
+      "size_bytes": 1085,
+      "sha256": "345dd57a00c17e1d88766271375aa7d61e9fdab36628ed7d9d49324f723c8dcb"
+    },
+    {
+      "path": "ROOT_M3_ANALYSIS_RELEASE.json",
+      "category": "protocol_or_review",
+      "role": "Run provenance, frozen binding, or reviewed handoff evidence",
+      "size_bytes": 1810,
+      "sha256": "f8bceb96a2d953d1dcf55e41acc20f9f2ddb82d3acd0cb238d3fa79acfeb4d85"
+    },
+    {
+      "path": "ROOT_M3_REVIEW.json",
+      "category": "protocol_or_review",
+      "role": "Run provenance, frozen binding, or reviewed handoff evidence",
+      "size_bytes": 1876,
+      "sha256": "02913135bb5065f0f2c27c615493e7532dd9900e0e5ff33c2d5a6ba37c266b41"
+    },
+    {
+      "path": "ROOT_MERGE_REVIEW.json",
+      "category": "protocol_or_review",
+      "role": "Run provenance, frozen binding, or reviewed handoff evidence",
+      "size_bytes": 596,
+      "sha256": "a2eb79644a75890fa3aeb206afa7d4fea13cd9154a39809b9860f2b5b575c29c"
+    },
+    {
+      "path": "ROOT_FINAL_REPORT_REVIEW.json",
+      "category": "protocol_or_review",
+      "role": "Run provenance, frozen binding, or reviewed handoff evidence",
+      "size_bytes": 1320,
+      "sha256": "3170f625d7e80a4f011765367543a690e42cca28be6f45bb4479f49dc1fb779a"
+    },
+    {
+      "path": "preparation/SOURCE_BINDINGS.json",
+      "category": "protocol_or_review",
+      "role": "Run provenance, frozen binding, or reviewed handoff evidence",
+      "size_bytes": 214766,
+      "sha256": "3ac525573c1d82556954bdef21d65162c1ead701fee184fb5d44fd38c54d5e44"
+    },
+    {
+      "path": "preparation/SOURCE_BINDINGS_REUSE_ONLY.json",
+      "category": "protocol_or_review",
+      "role": "Run provenance, frozen binding, or reviewed handoff evidence",
+      "size_bytes": 69707,
+      "sha256": "1ddb1e4b949a2e6bbb7bb1666b596225d0b91159d10e0a0afe444dd151346767"
+    },
+    {
+      "path": "preparation/DEPENDENCY_COPY_MANIFEST_FINAL.json",
+      "category": "protocol_or_review",
+      "role": "Run provenance, frozen binding, or reviewed handoff evidence",
+      "size_bytes": 30694,
+      "sha256": "c2c8edcbe8d5cf4e51788c49a87ee77a7bb3e1302403225e60a81e017f364cca"
+    },
+    {
+      "path": "preparation/DEPENDENCY_COPY_MANIFEST.json",
+      "category": "protocol_or_review",
+      "role": "Run provenance, frozen binding, or reviewed handoff evidence",
+      "size_bytes": 29003,
+      "sha256": "8b53d864fa95f40a2c3a0833fb48013c6813e7c907576b913e53f960ac3b79ce"
+    },
+    {
+      "path": "preparation/M0_PREPARATION_RECEIPT.json",
+      "category": "protocol_or_review",
+      "role": "Run provenance, frozen binding, or reviewed handoff evidence",
+      "size_bytes": 76790,
+      "sha256": "4dffacea1c09fe6fefbb0f76f388e18c80c888071b0b791596292b6bc4a01b6d"
+    },
+    {
+      "path": "preparation/M0_PROCESS_LEDGER.json",
+      "category": "protocol_or_review",
+      "role": "Run provenance, frozen binding, or reviewed handoff evidence",
+      "size_bytes": 185300,
+      "sha256": "eb3659f58a9ffad6d380812289a1fb74754766310bbe361921130998e356432c"
+    },
+    {
+      "path": "preparation/M0_SYNTHETIC_TEST_RECEIPT.json",
+      "category": "protocol_or_review",
+      "role": "Run provenance, frozen binding, or reviewed handoff evidence",
+      "size_bytes": 194265,
+      "sha256": "9366bc655fb3e0596ecfbe5b89b023f2914ffec0a2970ee6c1ffb4d23ff4da1c"
+    },
+    {
+      "path": "preparation/M0_HANDOFF.md",
+      "category": "protocol_or_review",
+      "role": "Run provenance, frozen binding, or reviewed handoff evidence",
+      "size_bytes": 6336,
+      "sha256": "77c5fd7e49b8dcb73759643a5c46801ec0ebd342b778fd13e500ddd3411378de"
+    },
+    {
+      "path": "preparation/REUSE_MAP.csv",
+      "category": "protocol_or_review",
+      "role": "Run provenance, frozen binding, or reviewed handoff evidence",
+      "size_bytes": 2662723,
+      "sha256": "8444c1fc22613dbe65ddc158a05365a4b24ae5f878bc003fb5ca5c928234376c"
+    },
+    {
+      "path": "preparation/REUSE_RECEIPT.json",
+      "category": "protocol_or_review",
+      "role": "Run provenance, frozen binding, or reviewed handoff evidence",
+      "size_bytes": 3611,
+      "sha256": "b6644be9577a76a978fdbcc92f0d92c97e101f1e772a846fa2bf2e2bcce2947d"
+    },
+    {
+      "path": "preparation/REUSE_RECEIPT_REUSE_ONLY.json",
+      "category": "protocol_or_review",
+      "role": "Run provenance, frozen binding, or reviewed handoff evidence",
+      "size_bytes": 3611,
+      "sha256": "f09eaedd3fcc2ffb8e3e2889ec04d32ff02ef7e278044f9bfb55adcc1bd52ec6"
+    },
+    {
+      "path": "preparation/merge_fixed_horizon_bank.py",
+      "category": "protocol_or_review",
+      "role": "Run provenance, frozen binding, or reviewed handoff evidence",
+      "size_bytes": 49320,
+      "sha256": "4fc4c14513a44f7b2f5abb29236c9ab319b1d7989b7662bf43690f4f8711df84"
+    },
+    {
+      "path": "OUT/FINAL_REPORT.md",
+      "category": "protocol_or_review",
+      "role": "Run provenance, frozen binding, or reviewed handoff evidence",
+      "size_bytes": 12880,
+      "sha256": "96bc5de92d33fdfcffaaeda6aa7bd9ae665de10dc9d43a435ce3cd59e9b185f8"
+    },
+    {
+      "path": "OUT/HANDOFF.md",
+      "category": "protocol_or_review",
+      "role": "Run provenance, frozen binding, or reviewed handoff evidence",
+      "size_bytes": 4105,
+      "sha256": "238ffc5d07a8aa4bb4befa544f6a360bda020cbd8f38050fd12592d72ab3b66c"
+    },
+    {
+      "path": "OUT/RUN_PROCESS_LEDGER.json",
+      "category": "protocol_or_review",
+      "role": "Run provenance, frozen binding, or reviewed handoff evidence",
+      "size_bytes": 24370,
+      "sha256": "8758b3e93e683bb4571aa38a91347b3c8978bc65982227c64ad77264027fac05"
+    },
+    {
+      "path": "bridge/M1_BRIDGE_RECEIPT.json",
+      "category": "bridge_data_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 9624,
+      "sha256": "a2509f3412814eae90caa9e21ee0a6d418b6a52d09b6710d2a834426f65ed51b"
+    },
+    {
+      "path": "bridge/public_decision_trace.jsonl.gz",
+      "category": "bridge_data_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 60502,
+      "sha256": "50257e923e8fd32cac4af2c5ee2f91760d7808da111d44b3d53c0a9abf9bbba9"
+    },
+    {
+      "path": "bridge/raw_trajectories.csv",
+      "category": "bridge_data_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 9670,
+      "sha256": "5d08fe0bf0d90caf3434afb0710025e822bba8cd0957f3c2ecd1a49b91e0cf15"
+    },
+    {
+      "path": "bridge/private/evaluator_sidecar.jsonl.gz",
+      "category": "bridge_data_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 13291,
+      "sha256": "1f2cbcab8aff33bf5c965e892f099914c902617c9dfa89bdc66877f4e8c54aa9"
+    },
+    {
+      "path": "bridge/private/physical_steps.jsonl.gz",
+      "category": "bridge_data_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 20589,
+      "sha256": "56949b9d3d3e24e6306c6992387fab78f9b1115ed9a9b41941196d0f20337d5d"
+    },
+    {
+      "path": "smoke/M1_SMOKE_RECEIPT.json",
+      "category": "smoke_data_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 9622,
+      "sha256": "fa386f6a0ff98fff7a63c76fe3a79485325854372d26eb2283fa18eab32c402d"
+    },
+    {
+      "path": "smoke/public_decision_trace.jsonl.gz",
+      "category": "smoke_data_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 277582,
+      "sha256": "9de4f9affb146265e5f2de10b8098d98ee856e3e60ed7b5a78693fb3e6067360"
+    },
+    {
+      "path": "smoke/raw_trajectories.csv",
+      "category": "smoke_data_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 37266,
+      "sha256": "7f8ec34604bb7d1a9b9773291d162888b9b3f437a3d9f869ecd8690bf0763ae4"
+    },
+    {
+      "path": "smoke/private/evaluator_sidecar.jsonl.gz",
+      "category": "smoke_data_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 56979,
+      "sha256": "7b6ea1a69cf88c930a91f878ded219d301e4555567ccb5c3e24b3c64062bce64"
+    },
+    {
+      "path": "smoke/private/physical_steps.jsonl.gz",
+      "category": "smoke_data_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 114463,
+      "sha256": "e35b8c63df3ceff6d33d35fdb670f5e6ca7d3a629215ae63bd0fcbb000e92a4f"
+    },
+    {
+      "path": "bank/M2_BANK_RECEIPT.json",
+      "category": "bank_data_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 9704,
+      "sha256": "6f1d430e87e22b637eeab85560e05c204125a17cf41182a020585ff60a4e07f8"
+    },
+    {
+      "path": "bank/public_decision_trace.jsonl.gz",
+      "category": "bank_data_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 32484186,
+      "sha256": "c5cb3dd8e3b88ff30b6d8bae369ddaadde4d40145291c3d95d992c7f10b4e910"
+    },
+    {
+      "path": "bank/raw_trajectories.csv",
+      "category": "bank_data_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 4202921,
+      "sha256": "0a25ef51c200d26161b2051c02bc37d6e9d588bf468aab0e9938d889adfa0ba1"
+    },
+    {
+      "path": "bank/private/evaluator_sidecar.jsonl.gz",
+      "category": "bank_data_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 6268386,
+      "sha256": "e84ba9c804dc0a55b06db185e4bc4718133999bb4df76b3aa956d916afcc5ae2"
+    },
+    {
+      "path": "bank/private/physical_steps.jsonl.gz",
+      "category": "bank_data_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 13660133,
+      "sha256": "a912d2fb5718c365eb0b00edb91877199980c893069a268a05f3a409ea467d00"
+    },
+    {
+      "path": "analysis/CLEAN_RESULTS.csv",
+      "category": "analysis_outputs_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 20726,
+      "sha256": "2f543529ded98a4bb6b44355ff0aa7edffe959037daf5995ae0b6cfcbd512aab"
+    },
+    {
+      "path": "analysis/CLEAN_RESULTS.pdf",
+      "category": "analysis_outputs_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 23756,
+      "sha256": "2d09d2dce4720df1b6c564adefb14ae990e80753d9705103d8ce4142b8e94f26"
+    },
+    {
+      "path": "analysis/CLEAN_RESULTS.png",
+      "category": "analysis_outputs_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 264104,
+      "sha256": "fc102c6bd079459304801ed42cbaf298cff28515bb604003edcc44dcd0706ade"
+    },
+    {
+      "path": "analysis/CONDITION_RESULTS.csv",
+      "category": "analysis_outputs_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 503956,
+      "sha256": "5ca33dc2c3d8bd64fb257db4b2bc06e31f4ebe3057db0acda3065067d8a53e86"
+    },
+    {
+      "path": "analysis/DEVELOPMENT_BEST_FIXED_H.csv",
+      "category": "analysis_outputs_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 2383,
+      "sha256": "056912882f14ae619720bc791664b7e08293b7716c58c1976dbedb4ec2457b83"
+    },
+    {
+      "path": "analysis/FAMILY_RESULTS_FACETS.pdf",
+      "category": "analysis_outputs_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 30769,
+      "sha256": "52153df04fbb524c108095a956d1ecfd5044ab2482e79790b5e38d6116f31242"
+    },
+    {
+      "path": "analysis/FAMILY_RESULTS_FACETS.png",
+      "category": "analysis_outputs_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 302971,
+      "sha256": "e0112e2e8be1be324dd3e739d311a1b7e556fac24aa1eac5fc89ff334b9cde71"
+    },
+    {
+      "path": "analysis/FAMILY_RESULTS.csv",
+      "category": "analysis_outputs_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 69180,
+      "sha256": "99cc04ac6d238800e2170f27b0598598ff1430286b54bc96d9a254ca8dce98f9"
+    },
+    {
+      "path": "analysis/FINAL_REPORT.md",
+      "category": "analysis_outputs_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 4943,
+      "sha256": "f7d8515c3a9e5ee0c986ebf0c154d66a2fb9942f43266d547b762c6649f06726"
+    },
+    {
+      "path": "analysis/FIXED_H_RRAW_BY_SOLVER.pdf",
+      "category": "analysis_outputs_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 25117,
+      "sha256": "36942517e32a4efd6a75548f1c917f1fd6f42cd4ee94aa1448283aa0249383e8"
+    },
+    {
+      "path": "analysis/FIXED_H_RRAW_BY_SOLVER.png",
+      "category": "analysis_outputs_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 283838,
+      "sha256": "40ede76486f0737eeba8fb11ffa1957427808000c1b9576fff636a965cb6112a"
+    },
+    {
+      "path": "analysis/FIXED_H_VS_H20.csv",
+      "category": "analysis_outputs_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 14619,
+      "sha256": "eb546b2d1fa202de52f2e252fcd1265ebe8ceecd20102979312c3b01ee8b4215"
+    },
+    {
+      "path": "analysis/LAYOUT_AGGREGATES.csv",
+      "category": "analysis_outputs_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 4239601,
+      "sha256": "308abc905e58ff8c88418368b02458464ea32d4c24e7e59fa8ebbf01773412c0"
+    },
+    {
+      "path": "analysis/M3_ANALYSIS_RECEIPT.json",
+      "category": "analysis_outputs_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 1133,
+      "sha256": "ef92b696597e156a320b4628b452636392dad7d0e3a164c03c752eee47895e75"
+    },
+    {
+      "path": "analysis/MERGE_RECEIPT.json",
+      "category": "analysis_outputs_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 5915,
+      "sha256": "969ae53ad8a448d13d69d48241a80209da6b72180d0519cf9e72f28877bd67b8"
+    },
+    {
+      "path": "analysis/MERGED_RAW_TRAJECTORIES.csv",
+      "category": "analysis_outputs_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 10978254,
+      "sha256": "eb0ecc87c90a50cd7fb62b2fc0466babdc28ab9342151d7c804f8ca11977b906"
+    },
+    {
+      "path": "analysis/OVERALL_EQUAL6_RESULTS.csv",
+      "category": "analysis_outputs_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 1611,
+      "sha256": "a49ddfb03caf5dd8df23675023f87a675152427598f4ddddd10ed95a0d397ee1"
+    },
+    {
+      "path": "analysis/PLOT_DATA_CLEAN.csv",
+      "category": "analysis_outputs_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 20726,
+      "sha256": "2f543529ded98a4bb6b44355ff0aa7edffe959037daf5995ae0b6cfcbd512aab"
+    },
+    {
+      "path": "analysis/PLOT_DATA_FAMILIES.csv",
+      "category": "analysis_outputs_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 69180,
+      "sha256": "99cc04ac6d238800e2170f27b0598598ff1430286b54bc96d9a254ca8dce98f9"
+    },
+    {
+      "path": "analysis/PLOT_DATA_FIXED_H_RRAW.csv",
+      "category": "analysis_outputs_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 7626,
+      "sha256": "7c7d36e882c5f33bda46bc0c07a8ea91815b6e054956e630de7c3295ad2ce0af"
+    },
+    {
+      "path": "analysis/PLOT_DATA_RIDGE_VS_FIXED_H.csv",
+      "category": "analysis_outputs_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 8208,
+      "sha256": "e3e4cbef6fdced7eb6e9e05f265138571a29a5557a25430ad438817e84f84e8f"
+    },
+    {
+      "path": "analysis/RIDGE_VS_FIXED_H_MACRO.csv",
+      "category": "analysis_outputs_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 8208,
+      "sha256": "e3e4cbef6fdced7eb6e9e05f265138571a29a5557a25430ad438817e84f84e8f"
+    },
+    {
+      "path": "analysis/RIDGE_VS_FIXED_H_SIMULTANEOUS.pdf",
+      "category": "analysis_outputs_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 25181,
+      "sha256": "0d1c77430aa33c5f6038cb24a228a26ebd0be0c6ef67c23185e8155b7fa23ae2"
+    },
+    {
+      "path": "analysis/RIDGE_VS_FIXED_H_SIMULTANEOUS.png",
+      "category": "analysis_outputs_and_receipts",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 296466,
+      "sha256": "92c04ee2e15b0d7db0b767d3d65c8dbdce15d22b558e27c366d5579564fa255a"
+    },
+    {
+      "path": "audit/M1_BRIDGE_SMOKE_RECEIPT.json",
+      "category": "audit_and_root_review",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 10396,
+      "sha256": "a1f086bf082b3f63801f6a54c0b4af5d08fb07c5c8fd4b0d2ffaa55014fb501a"
+    },
+    {
+      "path": "audit/M1_BRIDGE_TRACE_AUDIT.json",
+      "category": "audit_and_root_review",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 17258,
+      "sha256": "d67524ef905caf89cfe8311e9d09c6ec3fb85b63366241ea05afe026fb0ff95c"
+    },
+    {
+      "path": "audit/M1_SMOKE_TRACE_AUDIT.json",
+      "category": "audit_and_root_review",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 17222,
+      "sha256": "111e247111e4bd26853041ea89efe61b4644180c3880baacd30000ecac95461b"
+    },
+    {
+      "path": "audit/M1_TRACE_AUDIT_RECEIPT.json",
+      "category": "audit_and_root_review",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 1766,
+      "sha256": "6f239bc70791521991a954cecc4ac5156cbd5a12ffd643238045aa570efc34d8"
+    },
+    {
+      "path": "audit/M2_TRACE_AUDIT_RECEIPT.json",
+      "category": "audit_and_root_review",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 17571,
+      "sha256": "1ed8e3d71158a6896d6c41ccd3290ba84818e541f8ec803e2445ec0e845734f0"
+    },
+    {
+      "path": "audit/ROOT_FIGURE_REVIEW.json",
+      "category": "audit_and_root_review",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 1606,
+      "sha256": "4ccf75da7f288b76bf4754654aa373dd7c8ab44ff37b146a361428521671ed36"
+    },
+    {
+      "path": "audit/ROOT_INDEPENDENT_STATISTICS_RECEIPT.json",
+      "category": "audit_and_root_review",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 856,
+      "sha256": "03394090655442ece1d1aac5fc8ba232151ca7da164a83f2e3862a5adbb7cf8c"
+    },
+    {
+      "path": "audit/root_independent_statistics_review.py",
+      "category": "audit_and_root_review",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 8754,
+      "sha256": "c28915b03340c8ee513b384d63aae8c2975d42c262de27e4323f4d7e57fa3fe9"
+    },
+    {
+      "path": "audit/ROOT_M2_INPUTS_REVIEW.json",
+      "category": "audit_and_root_review",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 433,
+      "sha256": "d917abf6c296235b2a645014561573e1580524d3a3fc5b648e7a9a9f164a1997"
+    },
+    {
+      "path": "audit/ROOT_M2_MATRIX_REVIEW.json",
+      "category": "audit_and_root_review",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 1872,
+      "sha256": "059fa34d2ff5aa62a79ecbe39a7f52f256f346864ddebf31e26726062000e1d5"
+    },
+    {
+      "path": "workspace/R/offline_brp_common.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 5006,
+      "sha256": "e7735f6fd86956325fc78b3044ff8320385013ebdef41639d618bc72a70b3007"
+    },
+    {
+      "path": "workspace/R/configs/r_five_versions_comparison_v1.json",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 2988,
+      "sha256": "e25ba31e27dfc4576e69dfdf946fb58db6bc4c283a9124fc5ba4aec9c1f306a8"
+    },
+    {
+      "path": "workspace/R/configs/r_fixed_horizon_baselines_v1.json",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 2504,
+      "sha256": "10c347944767f5d0ac7e18ee2faa2af175a2c63db96769a29d7de2d1cbdc4197"
+    },
+    {
+      "path": "workspace/R/configs/r_noise_diagnostics_v1.json",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 7108,
+      "sha256": "8381cf3fdd0bb843268745d52d7621e4f8bd9ebded480bb6d2b96bca968c2dbf"
+    },
+    {
+      "path": "workspace/R/configs/r_seven_solvers_five_r_v1.json",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 4881,
+      "sha256": "15bf572b5397cf2283a48da64517d4febc63027e619422c04353fd104c6f7418"
+    },
+    {
+      "path": "workspace/R/experiments/fixed_horizon_analysis.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 72909,
+      "sha256": "fb5fa96e4e0d3f23f025f26273ff91d171b948467e82580a0b7c55cdb332a962"
+    },
+    {
+      "path": "workspace/R/experiments/fixed_horizon_integrity.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 19270,
+      "sha256": "66987e5bd100c896930f5420dcc123ea3a6d14f4a6f059b1a9bae45eac65a4ab"
+    },
+    {
+      "path": "workspace/R/experiments/fixed_horizon_runner.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 13225,
+      "sha256": "855c09aefd1a9a294d214ee1a5c0ae275103715db6ff135ad6c97fd5f37d98fc"
+    },
+    {
+      "path": "workspace/R/experiments/fixed_horizon_schedule.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 4451,
+      "sha256": "fdc9ed2e3ede9248634294a5f20de91d00280fe490e62c071492b3ddc6f53fe8"
+    },
+    {
+      "path": "workspace/R/experiments/fixed_horizon_smoke_replay_diagnostic.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 10931,
+      "sha256": "91e46961e0e893fa6fea934ca1f347adb566d971d23625249507f24dd13a4d63"
+    },
+    {
+      "path": "workspace/R/experiments/fixed_horizon_stage_driver.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 20788,
+      "sha256": "d435b1e19c324a9051445eff9f164b06e5e35eb597a43e2bc54b4b4764142580"
+    },
+    {
+      "path": "workspace/R/experiments/fixed_horizon_stage_process.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 17552,
+      "sha256": "06e1342c06c59bc95f91c2c725f2acf0e56be05a306fbb9f99baa1a59f41fb6e"
+    },
+    {
+      "path": "workspace/R/experiments/fixed_horizon_trace_audit_entry.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 24957,
+      "sha256": "a2c26ca38134a395de0833bcfdba19ff02f0ef888cdd63ae6aa80d61f86969e5"
+    },
+    {
+      "path": "workspace/R/experiments/fixed_horizon_trace_audit.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 76661,
+      "sha256": "f08a2433d7e41e48f7f01422954984ac83a2b65942951fd6729af3b7396d3d28"
+    },
+    {
+      "path": "workspace/R/experiments/history_reliability_r_protocol.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 18609,
+      "sha256": "089d29defe757f6be8ce49c721518ea8563dc0c3f01fa562092fc1bc9aae85c6"
+    },
+    {
+      "path": "workspace/R/experiments/r_five_versions_comparison.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 46068,
+      "sha256": "3336784a2abc0eb85d0c5c40e7dab554ad5208d92af5ff9d54c1fc489d8ccc51"
+    },
+    {
+      "path": "workspace/R/experiments/r_order_protocol.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 248168,
+      "sha256": "bd981ecd75aa3f81a33d5bd7fe8a86c5d6a2c2839bcf56adc0c15e539f2e2088"
+    },
+    {
+      "path": "workspace/R/experiments/r_seven_solvers_five_r_runner.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 42138,
+      "sha256": "fe95333582d65facbe59993b9d02490bddabb31d495c39e7c4f550844b132696"
+    },
+    {
+      "path": "workspace/R/experiments/time_window_shuffle_acceptance.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 59317,
+      "sha256": "9cb6c728e5cb06dc3f556039ce53094a4aab2101d57f263d2a8d3bf4286a2ab6"
+    },
+    {
+      "path": "workspace/R/experiments/time_window_shuffle_protocol.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 3965,
+      "sha256": "c944688226353b93801e33a6b877e52ad9946f4595a2b89618b19925e058ab10"
+    },
+    {
+      "path": "workspace/R/output/r_frozen_cross_solver_transfer_v1/r01/M0_PREPARATION_RECEIPT.json",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 10943,
+      "sha256": "33dc29e346ef9d52111f24448f9039a1a7cb70458fca091e37714334996a43b1"
+    },
+    {
+      "path": "workspace/R/output/r_frozen_cross_solver_transfer_v1/r01/data/select20.json",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 38259,
+      "sha256": "62f9e205f2df0197260629f4b9ad54a35a412c6ab16838709b0a26d224ecf426"
+    },
+    {
+      "path": "workspace/R/output/r_frozen_cross_solver_transfer_v1/r01/M1_select/GP/M1_RECEIPT.json",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 554649,
+      "sha256": "1218e9328b812a5cf8f03107cbec85da118ff66ec833465f56aa959f2cd3b01c"
+    },
+    {
+      "path": "workspace/R/output/r_order_v1/r01/M1_MODELS.json",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 26827,
+      "sha256": "7b769ad8407ea881fe30a3d2bf130604da3cbbebce585776e5302c02e28991e1"
+    },
+    {
+      "path": "workspace/R/output/universal_r_utility_v1/r02/M1_FIT_01/RIDGE_MODEL.json",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 2227,
+      "sha256": "07bf606c2a7ab1ac1bffa7d39449c34fc719ad8e454eba1243761af44fd7effe"
+    },
+    {
+      "path": "workspace/R/scrp/cross_solver_reliability_r.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 10399,
+      "sha256": "a61b830d8523513d6782cad980e0d465889f8003b770d9ebf513f9b782919b1b"
+    },
+    {
+      "path": "workspace/R/scrp/eri_eg_public.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 19118,
+      "sha256": "30cf988645f0706fde0a3876eaf4c99ca08efa7abd3dcc426f41086b96e397ed"
+    },
+    {
+      "path": "workspace/R/scrp/fixed_horizon_policy.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 3264,
+      "sha256": "a83e36230701cddcee75f7a49ef6e3b24a6afbd402b86c9139a4d0b04aec8c28"
+    },
+    {
+      "path": "workspace/R/scrp/h20_r_bank.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 41272,
+      "sha256": "c495e38bfd70a74fd2c41ba1ec8319843fb43d2f394933635c7576bf74425809"
+    },
+    {
+      "path": "workspace/R/scrp/h20_r_c2.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 18641,
+      "sha256": "f8d8290f9dda39f11b0b9d431da92bd042ec0664490fa1ec23dc1274fd46ef69"
+    },
+    {
+      "path": "workspace/R/scrp/h20_r_data.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 7945,
+      "sha256": "c5f6e3e58be2eddb2d07e7ba209585792b7a5c35638a40f9ab16f2c8fc149214"
+    },
+    {
+      "path": "workspace/R/scrp/history_reliability_r_provenance.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 2956,
+      "sha256": "40f33c305cad03f61daa1a28d9850e4bc37e8a25612463229889f90fff5399e9"
+    },
+    {
+      "path": "workspace/R/scrp/history_reliability_r.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 17151,
+      "sha256": "799a7755cdbf8d7b30fd67d1cac040e08b47f13836a9bad5304f72efd1bac113"
+    },
+    {
+      "path": "workspace/R/scrp/plan052_policies.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 12315,
+      "sha256": "75fd59ec4e74dbd545ada9fba5117cb4d6e22ce7709a06b1d71c36aa18713284"
+    },
+    {
+      "path": "workspace/R/scrp/plan052_public.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 2230,
+      "sha256": "075364561df7688328a97231e2998deee68146bd506376317bb5b6484bc1fa4a"
+    },
+    {
+      "path": "workspace/R/scrp/r_eri_eg_public.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 20612,
+      "sha256": "56d8581e2c4fa0babd4d74ba9c0c9e7a37232702adedd649060c89b02461de2a"
+    },
+    {
+      "path": "workspace/R/scrp/r_five_versions_actor.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 21170,
+      "sha256": "b06026e8d4ea81fc67eb6843b76689b08ff4c5a5632b0986d36e4ec6aa2a8439"
+    },
+    {
+      "path": "workspace/R/scrp/r_horizon_robustness.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 8495,
+      "sha256": "1a6810138593942b31c2ae9d4cbe797161c32286cfac0d8bae6b8109b650d689"
+    },
+    {
+      "path": "workspace/R/scrp/r_order_actor.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 13711,
+      "sha256": "c53b9ec179152104eacfce0139a3dc960f3b94c25b31e910f09323d358e4b1fe"
+    },
+    {
+      "path": "workspace/R/scrp/r_order_public.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 26216,
+      "sha256": "7b1297918973ee4e4e7d3935f2515ca1eda18769df96788f37d68d3a00e74135"
+    },
+    {
+      "path": "workspace/R/scrp/r_order_training.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 25177,
+      "sha256": "3292c665f01d9c12e6342b96fdb2b71971b1f14e9433386f7cd0eaa0ff0578db"
+    },
+    {
+      "path": "workspace/R/scrp/universal_r_utility_m1.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 75776,
+      "sha256": "c1bf0f6785af82f7301da9455f5b86717b3c3dcdebd0a9db55bba339c15d2c8a"
+    },
+    {
+      "path": "workspace/R/scrp/universal_r_utility.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 27995,
+      "sha256": "fa516b5b586071175e1aa2388de54389556ffc28ad49aca6ec4d87c65c5a1a00"
+    },
+    {
+      "path": "workspace/R/tests/test_fixed_horizon_analysis.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 18659,
+      "sha256": "fda5c63cb805270e121a9c87bcc30cf2854f28a5973d3b2333ce0731b5180668"
+    },
+    {
+      "path": "workspace/R/tests/test_fixed_horizon_contracts.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 49634,
+      "sha256": "31e7e0d871932979d280de4036cf8ec19968aabf0a292b1e565fa1a6db9f4436"
+    },
+    {
+      "path": "workspace/R/tests/test_plan052_offline.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 12640,
+      "sha256": "b69763113a272ccf6bba41192d298670fe1a1001d94c1172b396db2b97e146a7"
+    },
+    {
+      "path": "workspace/R/tests/test_plan052_online.py",
+      "category": "frozen_isolated_runtime",
+      "role": "Delivered protocol artifact",
+      "size_bytes": 18817,
+      "sha256": "ccb1fd66f56a3e2b080f4a73ac510dc7c104e666c6878afc64e2653535322dcb"
+    },
+    {
+      "path": "preparation/logs/M1_attempt_01.process_receipt.json",
+      "category": "process_receipt",
+      "role": "Actual exit and elapsed receipt; failures retained",
+      "size_bytes": 2677,
+      "sha256": "35f4e47a1d01ec5b31ad6dd2c901ee7ae9d9805327e0e7a0106912cfe5961e05"
+    },
+    {
+      "path": "preparation/logs/M1_attempt_01.stdout.txt",
+      "category": "process_log",
+      "role": "Captured process stdout or stderr",
+      "size_bytes": 144,
+      "sha256": "ed9965a4c38c5743f31dc30848779da5c6b7ee5fecd6a45fb42dbebe60e194d5"
+    },
+    {
+      "path": "preparation/logs/M1_attempt_01.stderr.txt",
+      "category": "process_log",
+      "role": "Captured process stdout or stderr",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "preparation/logs/M1_attempt_02.process_receipt.json",
+      "category": "process_receipt",
+      "role": "Actual exit and elapsed receipt; failures retained",
+      "size_bytes": 2706,
+      "sha256": "df60f5cc7155a09f375f2909f02bdc1f096f3e29a0c60d8f7f89b28497e84f33"
+    },
+    {
+      "path": "preparation/logs/M1_attempt_02.stdout.txt",
+      "category": "process_log",
+      "role": "Captured process stdout or stderr",
+      "size_bytes": 415,
+      "sha256": "97a54e11c1abf19b09463469c29316367a846952629989ba0912158adf804df5"
+    },
+    {
+      "path": "preparation/logs/M1_attempt_02.stderr.txt",
+      "category": "process_log",
+      "role": "Captured process stdout or stderr",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "preparation/logs/M1_AUDIT_attempt_01.process_receipt.json",
+      "category": "process_receipt",
+      "role": "Actual exit and elapsed receipt; failures retained",
+      "size_bytes": 5791,
+      "sha256": "5e1d24e62cfa233fe1ea5a6b9f6a808c2c5200711116688db5a8931ad393247b"
+    },
+    {
+      "path": "preparation/logs/M1_AUDIT_attempt_01.stdout.txt",
+      "category": "process_log",
+      "role": "Captured process stdout or stderr",
+      "size_bytes": 424,
+      "sha256": "37713cffdfb1a732cf44fee27dfd04e3cd8b9bc10fe78c807ea32e4e267471cd"
+    },
+    {
+      "path": "preparation/logs/M1_AUDIT_attempt_01.stderr.txt",
+      "category": "process_log",
+      "role": "Captured process stdout or stderr",
+      "size_bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "preparation/logs/M1_attempt_03.process_receipt.json",
+      "category": "process_receipt",
+      "role": "Actual exit and elapsed receipt; failures retained",
+      "size_bytes": 2710,
+      "sha256": "ea093dd43af09202016f7fd0388ee38aed9bcf5749c5c66487150eaf98f7710d"
+    },
+    {
+      "path": "preparation/logs/M1_attempt_03.stdout.txt",
+      "category": "process_log",
+      "role": "Captured process stdout or stderr",
+      "size_bytes": 415,
+      "sha256": "badcc87d250b7249eb46b418d7c40f3b7e0070a2012e6c460bc1d5fa7c0f7667"
+    },
+    {
+      "path": "preparation/logs/M1_attempt_03.stderr.txt",
+      "category": "process_log",
+      "role": "Captured process stdout or stderr",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "preparation/logs/M1_AUDIT_attempt_02.process_receipt.json",
+      "category": "process_receipt",
+      "role": "Actual exit and elapsed receipt; failures retained",
+      "size_bytes": 5806,
+      "sha256": "776796b808cc94639502a58e5547f9519746ac2955a72c98ef20bbf324ccc5c1"
+    },
+    {
+      "path": "preparation/logs/M1_AUDIT_attempt_02.stdout.txt",
+      "category": "process_log",
+      "role": "Captured process stdout or stderr",
+      "size_bytes": 414,
+      "sha256": "3f939b135c2dc50edef1a2a26962c5df09479a88615a0d273fb1d6571ed54b64"
+    },
+    {
+      "path": "preparation/logs/M1_AUDIT_attempt_02.stderr.txt",
+      "category": "process_log",
+      "role": "Captured process stdout or stderr",
+      "size_bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "preparation/logs/M1_AUDIT_attempt_03.process_receipt.json",
+      "category": "process_receipt",
+      "role": "Actual exit and elapsed receipt; failures retained",
+      "size_bytes": 3389,
+      "sha256": "c96f45947f895408e3f44c90efdf818fde6207e4f23a75190f299e931c00d4e4"
+    },
+    {
+      "path": "preparation/logs/M1_AUDIT_attempt_03.stdout.txt",
+      "category": "process_log",
+      "role": "Captured process stdout or stderr",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "preparation/logs/M1_AUDIT_attempt_03.stderr.txt",
+      "category": "process_log",
+      "role": "Captured process stdout or stderr",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "preparation/logs/M1_AUDIT_attempt_04.process_receipt.json",
+      "category": "process_receipt",
+      "role": "Actual exit and elapsed receipt; failures retained",
+      "size_bytes": 3417,
+      "sha256": "6db282bb61947653c5afc292ad2fda9c99d9c89546adfb23a486f315a199f81a"
+    },
+    {
+      "path": "preparation/logs/M1_AUDIT_attempt_04.stdout.txt",
+      "category": "process_log",
+      "role": "Captured process stdout or stderr",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "preparation/logs/M1_AUDIT_attempt_04.stderr.txt",
+      "category": "process_log",
+      "role": "Captured process stdout or stderr",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "preparation/logs/M1_AUDIT_attempt_05.process_receipt.json",
+      "category": "process_receipt",
+      "role": "Actual exit and elapsed receipt; failures retained",
+      "size_bytes": 3421,
+      "sha256": "273c82da24c95a356c23080125ca1cb2058b8ea9b362495123253cda4c46a99e"
+    },
+    {
+      "path": "preparation/logs/M1_AUDIT_attempt_05.stdout.txt",
+      "category": "process_log",
+      "role": "Captured process stdout or stderr",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "preparation/logs/M1_AUDIT_attempt_05.stderr.txt",
+      "category": "process_log",
+      "role": "Captured process stdout or stderr",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "preparation/logs/M1_attempt_04.process_receipt.json",
+      "category": "process_receipt",
+      "role": "Actual exit and elapsed receipt; failures retained",
+      "size_bytes": 2709,
+      "sha256": "a25a7ff0bf10bdde175169a406edf38d66c4d8b43218f4ce0bf290e8caccc564"
+    },
+    {
+      "path": "preparation/logs/M1_attempt_04.stdout.txt",
+      "category": "process_log",
+      "role": "Captured process stdout or stderr",
+      "size_bytes": 404,
+      "sha256": "97d4662f0b5ac89683e916efcd3b9cb411515eb9ba2982c8c577e0e118fcdbdf"
+    },
+    {
+      "path": "preparation/logs/M1_attempt_04.stderr.txt",
+      "category": "process_log",
+      "role": "Captured process stdout or stderr",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "preparation/logs/M1_AUDIT_attempt_06.process_receipt.json",
+      "category": "process_receipt",
+      "role": "Actual exit and elapsed receipt; failures retained",
+      "size_bytes": 8038,
+      "sha256": "de000ce5dd6d52cc01222576862a1ab0aa577493d673b89eeab24a703a3b234a"
+    },
+    {
+      "path": "preparation/logs/M1_AUDIT_attempt_06.stdout.txt",
+      "category": "process_log",
+      "role": "Captured process stdout or stderr",
+      "size_bytes": 263,
+      "sha256": "60822b10d08eed23db32e44e8d0bb5c4b2bf4f9e1e4037d681895615e5ddfa2f"
+    },
+    {
+      "path": "preparation/logs/M1_AUDIT_attempt_06.stderr.txt",
+      "category": "process_log",
+      "role": "Captured process stdout or stderr",
+      "size_bytes": 4,
+      "sha256": "dba5166ad9db9ba648c1032ebbd34dcd0d085b50023b839ef5c68ca1db93a563"
+    },
+    {
+      "path": "preparation/logs/M2_attempt_01.process_receipt.json",
+      "category": "process_receipt",
+      "role": "Actual exit and elapsed receipt; failures retained",
+      "size_bytes": 2701,
+      "sha256": "c6aa716bca7535f0c4eede7a1f07e6b5234eef3836f7a2d6ea14d0dc11678a41"
+    },
+    {
+      "path": "preparation/logs/M2_attempt_01.stdout.txt",
+      "category": "process_log",
+      "role": "Captured process stdout or stderr",
+      "size_bytes": 398,
+      "sha256": "c2d69884134daf06ab4be11a3e0149d1d417f927d7fedb1b8fdd2dad72e75f51"
+    },
+    {
+      "path": "preparation/logs/M2_attempt_01.stderr.txt",
+      "category": "process_log",
+      "role": "Captured process stdout or stderr",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "preparation/logs/M2_AUDIT_attempt_01.process_receipt.json",
+      "category": "process_receipt",
+      "role": "Actual exit and elapsed receipt; failures retained",
+      "size_bytes": 2525,
+      "sha256": "a2e41907b503c28584efad30b4abe46d89b8f9dbbbcb367fa618753b2fe197ee"
+    },
+    {
+      "path": "preparation/logs/M2_AUDIT_attempt_01.stdout.txt",
+      "category": "process_log",
+      "role": "Captured process stdout or stderr",
+      "size_bytes": 101,
+      "sha256": "f663dfe4f7a1516237e366c5c22837df13d21e7f78ff6b2cabb8426ed96d2c2d"
+    },
+    {
+      "path": "preparation/logs/M2_AUDIT_attempt_01.stderr.txt",
+      "category": "process_log",
+      "role": "Captured process stdout or stderr",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "preparation/logs/M3_ANALYSIS_outer_attempt_01.process_receipt.json",
+      "category": "process_receipt",
+      "role": "Actual exit and elapsed receipt; failures retained",
+      "size_bytes": 4258,
+      "sha256": "4ee06ec2481ffe2114d9230afb49f9afcb1669db57ac5149a5deb0f71e14a44f"
+    },
+    {
+      "path": "preparation/logs/M3_ANALYSIS_outer_attempt_01.stdout.txt",
+      "category": "process_log",
+      "role": "Captured process stdout or stderr",
+      "size_bytes": 275,
+      "sha256": "aa781fabec079c222bfc52c40b7cdb10c2434bd8f0d1ec449cc54e122308a974"
+    },
+    {
+      "path": "preparation/logs/M3_ANALYSIS_outer_attempt_01.stderr.txt",
+      "category": "process_log",
+      "role": "Captured process stdout or stderr",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "preparation/logs/M3_ANALYSIS_attempt_01.process_receipt.json",
+      "category": "process_receipt",
+      "role": "Actual exit and elapsed receipt; failures retained",
+      "size_bytes": 2414,
+      "sha256": "da7b2dfbc655231f2c0858ba1a9804a249edf4b36b72af2a87a4bd9c70ffb4e0"
+    },
+    {
+      "path": "preparation/logs/M3_ANALYSIS_attempt_01.stdout.txt",
+      "category": "process_log",
+      "role": "Captured process stdout or stderr",
+      "size_bytes": 2936,
+      "sha256": "27a95b5b4ccff9a220085ff1fb15479f86cced91c11e0ae478af94f43f334e0d"
+    },
+    {
+      "path": "preparation/logs/M3_ANALYSIS_attempt_01.stderr.txt",
+      "category": "process_log",
+      "role": "Captured process stdout or stderr",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "preparation/logs/ROOT_STATS_REVIEW_attempt_01.process_receipt.json",
+      "category": "process_receipt",
+      "role": "Actual exit and elapsed receipt; failures retained",
+      "size_bytes": 233,
+      "sha256": "383ff42f5650d4cd96e057ded47ad622512f697dd0ebfb84ea9f76556778cd95"
+    },
+    {
+      "path": "preparation/logs/ROOT_STATS_REVIEW_attempt_01.stdout.txt",
+      "category": "process_log",
+      "role": "Captured process stdout or stderr",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "preparation/logs/ROOT_STATS_REVIEW_attempt_01.stderr.txt",
+      "category": "process_log",
+      "role": "Captured process stdout or stderr",
+      "size_bytes": 249,
+      "sha256": "5e13a41adb0903edb442d7e66276e8b630c434095085a5f1036aa686ee9f6065"
+    },
+    {
+      "path": "preparation/logs/ROOT_STATS_REVIEW_attempt_02.process_receipt.json",
+      "category": "process_receipt",
+      "role": "Actual exit and elapsed receipt; failures retained",
+      "size_bytes": 238,
+      "sha256": "06d16a6fb605dc62fb6084fff9f9d6309e6079b1f1606ac9b07b2f3abd48d05c"
+    },
+    {
+      "path": "preparation/logs/ROOT_STATS_REVIEW_attempt_02.stdout.txt",
+      "category": "process_log",
+      "role": "Captured process stdout or stderr",
+      "size_bytes": 770,
+      "sha256": "169218e740457b434b492471a61a7c7e50147885dbd2f6d08e14980cbc59f900"
+    },
+    {
+      "path": "preparation/logs/ROOT_STATS_REVIEW_attempt_02.stderr.txt",
+      "category": "process_log",
+      "role": "Captured process stdout or stderr",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "preparation/logs/fixed_horizon_merge_attempt_01.process_receipt.json",
+      "category": "process_receipt",
+      "role": "Actual exit and elapsed receipt; failures retained",
+      "size_bytes": 1440,
+      "sha256": "ad55e2c8cabd4c867bbe10defc111111d2c68a77ed5870634271fb99274e58af"
+    },
+    {
+      "path": "preparation/logs/fixed_horizon_merge_attempt_01.stdout.txt",
+      "category": "process_log",
+      "role": "Captured process stdout or stderr",
+      "size_bytes": 5907,
+      "sha256": "e2712a1e7428cd7b301c9e902d7348133900c3243a5d78ccb04a6926d50153bc"
+    },
+    {
+      "path": "preparation/logs/fixed_horizon_merge_attempt_01.stderr.txt",
+      "category": "process_log",
+      "role": "Captured process stdout or stderr",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "preparation/logs/fixed_horizon_merge_attempt_01.validation_process_receipt.json",
+      "category": "process_receipt",
+      "role": "Actual exit and elapsed receipt; failures retained",
+      "size_bytes": 884,
+      "sha256": "4bb5e285138a5fb94b2cbc86950f04c386c9a74322aa17d9616716eb8aedf058"
+    },
+    {
+      "path": "preparation/history/M1_ATTEMPT01/M1_ATTEMPT01_HASH_MANIFEST.json",
+      "category": "historical_failed_attempt_manifest",
+      "role": "Archived source/output hashes for a retained nonaccepted attempt",
+      "size_bytes": 9684,
+      "sha256": "2610fced8b07ef6d06e5e45309bd0c2237464edb6a8878df1488c62d64402c21"
+    },
+    {
+      "path": "preparation/history/M1_ATTEMPT02/M1_ATTEMPT02_HASH_MANIFEST.json",
+      "category": "historical_failed_attempt_manifest",
+      "role": "Archived source/output hashes for a retained nonaccepted attempt",
+      "size_bytes": 12509,
+      "sha256": "919628b0d123ae6a348d3ab9c58d1feb077d657f5c37cda610c10ce4273178ce"
+    },
+    {
+      "path": "preparation/history/M1_ATTEMPT03/M1_ATTEMPT03_HASH_MANIFEST.json",
+      "category": "historical_failed_attempt_manifest",
+      "role": "Archived source/output hashes for a retained nonaccepted attempt",
+      "size_bytes": 41592,
+      "sha256": "5f60749d1233d75eda56339fdea3b4bb9c671567386fb8721ef56b8b2ca8d787"
+    },
+    {
+      "path": "preparation/history/M1_ATTEMPT03/M0_REV04/M0_REV04_RESTORED_SOURCE_MANIFEST.json",
+      "category": "historical_failed_attempt_manifest",
+      "role": "Archived source/output hashes for a retained nonaccepted attempt",
+      "size_bytes": 2017,
+      "sha256": "ada040e0997b653b11a191bd093238edb261c9bb928ee4102eddd429cff65a1b"
+    }
+  ]
+}

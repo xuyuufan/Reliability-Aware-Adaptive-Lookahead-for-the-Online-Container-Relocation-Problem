@@ -1,0 +1,17 @@
+{
+  "analysis_cumulative_seconds": 26.05756659999679,
+  "analysis_process_exit_code": 0,
+  "analysis_process_seconds": 26.05756659999679,
+  "analysis_process_timed_out": false,
+  "analyzer_sha256": "fb5fa96e4e0d3f23f025f26273ff91d171b948467e82580a0b7c55cdb332a962",
+  "merged_raw_sha256": "eb0ecc87c90a50cd7fb62b2fc0466babdc28ab9342151d7c804f8ca11977b906",
+  "process_receipt_path": "D:\\DSAI\\PAPER_CODE_RIDGE_BUNDLE\\experiments\\fixed_horizon_baselines_v1\\r01\\preparation\\logs\\M3_ANALYSIS_attempt_01.process_receipt.json",
+  "process_receipt_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "process_receipt_stdout_sha256": "27a95b5b4ccff9a220085ff1fb15479f86cced91c11e0ae478af94f43f334e0d",
+  "protocol_id": "ridge_fixed_horizon_baselines_v1",
+  "receipt_sha256": "10364883ba4447504e51d02b42ef8fdda8dd8106eb73183fb34c33b2676b86fc",
+  "release_file_sha256": "f8bceb96a2d953d1dcf55e41acc20f9f2ddb82d3acd0cb238d3fa79acfeb4d85",
+  "run_id": "r01",
+  "scope": "registered_complete_15120_row_development_analysis",
+  "status": "PASS_M3_ANALYSIS_COMPLETE_PENDING_ROOT_REVIEW"
+}

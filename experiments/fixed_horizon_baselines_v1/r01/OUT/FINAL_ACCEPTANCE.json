@@ -1,0 +1,137 @@
+{
+  "accepted_at_utc": "2026-10-15T01:30:00.401942+00:00",
+  "archived_files_verified": 102,
+  "artifact_index_file_sha256": "4e458b30196dc18e5922b3c25df9dac31c3c69bb0bd579fbfb7eefe38c6baa48",
+  "binding_file_sha256": "3ac525573c1d82556954bdef21d65162c1ead701fee184fb5d44fd38c54d5e44",
+  "budget_totals": {
+    "analysis": {
+      "accounting_note": "Budget counts the outer M3 process once plus the ROOT active review window. The nested analyzer is included in outer time. ROOT_STATS_REVIEW attempts and all visual/statistical review work are included in the active window.",
+      "actual_budget_seconds": 414.064615,
+      "budget_cap_seconds": 1800,
+      "formal_analysis_attempts": 1,
+      "nested_analyzer_seconds": 26.05756659999679,
+      "nested_time_double_counted": false,
+      "outer_m3_process_seconds": 27.561564,
+      "remaining_seconds": 1385.935385,
+      "review_processes_included_within_active_window": true,
+      "root_active_review_window_seconds": 386.503051,
+      "root_review_and_render_time_pending": false,
+      "root_review_window_end_local": "2026-10-15T09:08:49.22998+08:00",
+      "root_review_window_start_local": "2026-10-15T09:02:22.726929+08:00",
+      "root_statistics_review_process_attempts": 2
+    },
+    "audit": {
+      "actual_process_seconds": 481.8519064999945,
+      "attempts": 7,
+      "remaining_seconds": 6718.148093500005
+    },
+    "science": {
+      "actual_process_seconds": 1250.5031525999984,
+      "attempts": 5,
+      "remaining_seconds": 5949.496847400002
+    }
+  },
+  "completion_note": "All authorized M0-M3 stages, independent statistical and visual reviews, final report review, provenance index and final delivery review complete. Negative and unresolved results preserved. No further experiments authorized or run in closure.",
+  "delivery_files": {
+    "ARTIFACT_HASH_INDEX.json": {
+      "path": "D:\\DSAI\\PAPER_CODE_RIDGE_BUNDLE\\experiments\\fixed_horizon_baselines_v1\\r01\\OUT\\ARTIFACT_HASH_INDEX.json",
+      "sha256": "4e458b30196dc18e5922b3c25df9dac31c3c69bb0bd579fbfb7eefe38c6baa48"
+    },
+    "FINAL_REPORT.md": {
+      "path": "D:\\DSAI\\PAPER_CODE_RIDGE_BUNDLE\\experiments\\fixed_horizon_baselines_v1\\r01\\OUT\\FINAL_REPORT.md",
+      "sha256": "96bc5de92d33fdfcffaaeda6aa7bd9ae665de10dc9d43a435ce3cd59e9b185f8"
+    },
+    "HANDOFF.md": {
+      "path": "D:\\DSAI\\PAPER_CODE_RIDGE_BUNDLE\\experiments\\fixed_horizon_baselines_v1\\r01\\OUT\\HANDOFF.md",
+      "sha256": "238ffc5d07a8aa4bb4befa544f6a360bda020cbd8f38050fd12592d72ab3b66c"
+    },
+    "RUN_PROCESS_LEDGER.json": {
+      "path": "D:\\DSAI\\PAPER_CODE_RIDGE_BUNDLE\\experiments\\fixed_horizon_baselines_v1\\r01\\OUT\\RUN_PROCESS_LEDGER.json",
+      "sha256": "8758b3e93e683bb4571aa38a91347b3c8978bc65982227c64ad77264027fac05"
+    }
+  },
+  "executor_model": "GPT-6 Luna Max",
+  "frozen_counts_verified": {
+    "frozen_inputs": 180,
+    "local_sources": 24,
+    "original_sources": 69,
+    "package_targets": 87,
+    "runtime_copies": 56
+  },
+  "independent_statistics": {
+    "fields_verified": 56405,
+    "main_comparisons": 35,
+    "max_absolute_error": 6.217248937900877e-14,
+    "paired_layout_bootstrap_replicates": 100000
+  },
+  "indexed_artifacts_verified": 180,
+  "m3_immutable_output_files_verified": 22,
+  "process_ledger_receipts_verified": 13,
+  "protocol_id": "ridge_fixed_horizon_baselines_v1",
+  "receipt_sha256": "be8da25faf74a257fc98851e925271cef899ff7e95075554ef6a97886b7aebbe",
+  "report_links_verified": 26,
+  "review_evidence": {
+    "ROOT_FINAL_REPORT_REVIEW.json": "3170f625d7e80a4f011765367543a690e42cca28be6f45bb4479f49dc1fb779a",
+    "ROOT_M2_REVIEW.json": "345dd57a00c17e1d88766271375aa7d61e9fdab36628ed7d9d49324f723c8dcb",
+    "ROOT_M3_REVIEW.json": "02913135bb5065f0f2c27c615493e7532dd9900e0e5ff33c2d5a6ba37c266b41",
+    "ROOT_MERGE_REVIEW.json": "a2eb79644a75890fa3aeb206afa7d4fea13cd9154a39809b9860f2b5b575c29c",
+    "audit/ROOT_FIGURE_REVIEW.json": "4ccf75da7f288b76bf4754654aa373dd7c8ab44ff37b146a361428521671ed36",
+    "audit/ROOT_INDEPENDENT_STATISTICS_RECEIPT.json": "03394090655442ece1d1aac5fc8ba232151ca7da164a83f2e3862a5adbb7cf8c"
+  },
+  "reviewer": "ROOT",
+  "run_id": "r01",
+  "schema": "fixed_horizon_root_final_acceptance_v1",
+  "scientific_conclusions": {
+    "all_six_solvers_superior_over_all_h_supported": false,
+    "clean_h20_relocation_increase_percent_range": [
+      5.09165,
+      11.087866
+    ],
+    "clean_h20_ridge_point_estimates_negative_all_six": true,
+    "equal6_ridge_vs_h20_improvement_percent": 3.221,
+    "equal6_supported_at_h": [
+      0,
+      2,
+      5,
+      10,
+      20
+    ],
+    "independent_confirmation": false,
+    "same_development_best_fixed_h": {
+      "Chain": 20,
+      "EG": 20,
+      "EM": 20,
+      "ERI": 10,
+      "GP": 20,
+      "Minmax": 20
+    },
+    "scope": "20 exposed development layouts; three-noise-family equal-weight macro; CLEAN separate",
+    "sealed_or_ood_evaluation": false,
+    "solver_h_comparisons_reverse_supported": 0,
+    "solver_h_comparisons_supported": 24,
+    "solver_h_comparisons_unresolved": 6,
+    "solvers_supported_over_all_five_h": [
+      "EG",
+      "Minmax"
+    ],
+    "universal_or_deployment_benefit_claimed": false
+  },
+  "source_binding_canonical_sha256": "f16f483abae18010e3f1f2b9f32c64f54f198926ddcf92d96015fb81acf5ed97",
+  "status": "PASS_ROOT_FINAL_ACCEPTANCE",
+  "task_complete": true,
+  "technical_pass": true,
+  "trajectory_accounting": {
+    "M0_historical_reuse_rows_not_new_executions": 5040,
+    "M1_bridge_new_executions": 24,
+    "M1_smoke_new_executions_counted_once": 96,
+    "M2_audited_steps": 325842,
+    "M2_audited_trajectories": 10080,
+    "M2_bank_rows": 10080,
+    "M2_exact_smoke_reuse_rows_not_new_executions": 96,
+    "M2_new_fixed_h_executions": 9984,
+    "accepted_protocol_executions": 10104,
+    "all_science_executions_including_discarded": 10464,
+    "historical_engineering_executions_not_accepted": 360,
+    "merged_rows": 15120
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "canonical_order": "layout: G1/G2 then fingerprint; condition: registered 21-condition order; solver: registered six-solver order; method: RIDGE,FIXED_H0,FIXED_H2,FIXED_H5,FIXED_H10,FIXED_H20",
+  "entry_snapshot": {
+    "authorization_file_sha256": "952c2fbfc4bf3a081e34f8eff6be84d1d873dc42fc586fdd3e2f767319a2b5e1",
+    "historical_reuse_only_binding_sha256": "d00caddef46c4ee71dccbfe96ed968d2909980953e0b634372727e6676435711",
+    "m0_preparation_receipt_file_sha256": "4dffacea1c09fe6fefbb0f76f388e18c80c888071b0b791596292b6bc4a01b6d",
+    "plan_sha256": "b9ed06aeeecf921d4a9b80e308e792a57aaf0626ed83d90f1214fe51d52f5f86",
+    "release_file_sha256": "1c303a870179b9703fadb9117b3a4dc9b50237d3679dd65e6d112092a887c4f9",
+    "reuse_receipt_file_sha256": "b6644be9577a76a978fdbcc92f0d92c97e101f1e772a846fa2bf2e2bcce2947d",
+    "root_m0_review_file_sha256": "fd770c52d7ccf9d66c477ac67d104b0c8eeff925a629ca245824dcdbc464705b",
+    "source_binding_sha256": "f16f483abae18010e3f1f2b9f32c64f54f198926ddcf92d96015fb81acf5ed97",
+    "source_bindings_file_sha256": "3ac525573c1d82556954bdef21d65162c1ead701fee184fb5d44fd38c54d5e44",
+    "synthetic_receipt_file_sha256": "9366bc655fb3e0596ecfbe5b89b023f2914ffec0a2970ee6c1ffb4d23ff4da1c"
+  },
+  "exit_frozen_check": {
+    "m0_hashes_unchanged": true,
+    "release_file_sha256": "1c303a870179b9703fadb9117b3a4dc9b50237d3679dd65e6d112092a887c4f9",
+    "stage": "M2_BANK"
+  },
+  "forecast_pair_count": 420,
+  "historical_key_policy": "analysis trajectory_key uses canonical mapped method; source_trajectory_key preserves the exact original key from REUSE_MAP/source raw",
+  "historical_reuse_count": 5040,
+  "input_file_hashes": {
+    "D:\\DSAI\\PAPER_CODE_RIDGE_BUNDLE\\experiments\\fixed_horizon_baselines_v1\\r01\\audit\\M2_TRACE_AUDIT_RECEIPT.json": "1ed8e3d71158a6896d6c41ccd3290ba84818e541f8ec803e2445ec0e845734f0",
+    "D:\\DSAI\\PAPER_CODE_RIDGE_BUNDLE\\experiments\\fixed_horizon_baselines_v1\\r01\\bank\\M2_BANK_RECEIPT.json": "6f1d430e87e22b637eeab85560e05c204125a17cf41182a020585ff60a4e07f8",
+    "D:\\DSAI\\PAPER_CODE_RIDGE_BUNDLE\\experiments\\fixed_horizon_baselines_v1\\r01\\bank\\raw_trajectories.csv": "0a25ef51c200d26161b2051c02bc37d6e9d588bf468aab0e9938d889adfa0ba1",
+    "D:\\DSAI\\PAPER_CODE_RIDGE_BUNDLE\\experiments\\fixed_horizon_baselines_v1\\r01\\preparation\\REUSE_MAP.csv": "8444c1fc22613dbe65ddc158a05365a4b24ae5f878bc003fb5ca5c928234376c",
+    "D:\\DSAI\\PAPER_CODE_RIDGE_BUNDLE\\experiments\\fixed_horizon_baselines_v1\\r01\\preparation\\REUSE_RECEIPT.json": "b6644be9577a76a978fdbcc92f0d92c97e101f1e772a846fa2bf2e2bcce2947d",
+    "D:\\DSAI\\containter_new\\R\\output\\r_five_versions_comparison_v1\\r01\\bank_01\\raw_trajectories.csv": "3c99ad56a47fe5a8bdbb3f7044cf91190084360e9d72fb6c90243160b61a0d44",
+    "D:\\DSAI\\containter_new\\R\\output\\r_seven_solvers_five_r_v1\\r01\\m2_bank_01\\raw_trajectories.csv": "b4911b67d65bc05ec854c69f55c623735be957e71af1fb9000bfceee79b10862"
+  },
+  "layout_condition_cells": 420,
+  "layout_count": 20,
+  "m0_reuse_receipt_file_sha256": "b6644be9577a76a978fdbcc92f0d92c97e101f1e772a846fa2bf2e2bcce2947d",
+  "m0_reuse_receipt_sha256": "042adfa8094ebe473e83712aa6d87af97424c66725925ac234e44f13cb506e4f",
+  "m2_audit_receipt_file_sha256": "1ed8e3d71158a6896d6c41ccd3290ba84818e541f8ec803e2445ec0e845734f0",
+  "m2_audit_receipt_sha256": "e3b48dd4e7b216e05acaadb5ab722c97ce3b295bbf485e6c8492e49fe83a213d",
+  "m2_bank_new_count": 9984,
+  "m2_bank_receipt_file_sha256": "6f1d430e87e22b637eeab85560e05c204125a17cf41182a020585ff60a4e07f8",
+  "m2_bank_receipt_sha256": "a125c000651126752a610e59ea301cae6b90ce088a7993df15f2f40371c83717",
+  "m2_bank_trajectory_count": 10080,
+  "m2_exact_smoke_reuse_count": 96,
+  "m2_release_sha256": "1c303a870179b9703fadb9117b3a4dc9b50237d3679dd65e6d112092a887c4f9",
+  "merge_elapsed_seconds": 14.103306,
+  "merge_receipt_path": "D:\\DSAI\\PAPER_CODE_RIDGE_BUNDLE\\experiments\\fixed_horizon_baselines_v1\\r01\\analysis\\MERGE_RECEIPT.json",
+  "merge_script_path": "D:\\DSAI\\PAPER_CODE_RIDGE_BUNDLE\\experiments\\fixed_horizon_baselines_v1\\r01\\preparation\\merge_fixed_horizon_bank.py",
+  "merge_script_sha256": "4fc4c14513a44f7b2f5abb29236c9ab319b1d7989b7662bf43690f4f8711df84",
+  "merged_csv_path": "D:\\DSAI\\PAPER_CODE_RIDGE_BUNDLE\\experiments\\fixed_horizon_baselines_v1\\r01\\analysis\\MERGED_RAW_TRAJECTORIES.csv",
+  "merged_csv_sha256": "eb0ecc87c90a50cd7fb62b2fc0466babdc28ab9342151d7c804f8ca11977b906",
+  "precommit_frozen_exit_check": {
+    "m0_hashes_unchanged": true,
+    "release_file_sha256": "1c303a870179b9703fadb9117b3a4dc9b50237d3679dd65e6d112092a887c4f9",
+    "stage": "M2_BANK"
+  },
+  "protocol_id": "ridge_fixed_horizon_baselines_v1",
+  "real_trajectory_count": 10080,
+  "receipt_sha256": "158f7fc1ed31624f6f72bd581fb670e9beafd71b92fa31a68d4c754ab0400103",
+  "reuse_map_sha256": "8444c1fc22613dbe65ddc158a05365a4b24ae5f878bc003fb5ca5c928234376c",
+  "reused_source_hashes": {
+    "D:\\DSAI\\containter_new\\R\\output\\r_five_versions_comparison_v1\\r01\\bank_01\\raw_trajectories.csv": "3c99ad56a47fe5a8bdbb3f7044cf91190084360e9d72fb6c90243160b61a0d44",
+    "D:\\DSAI\\containter_new\\R\\output\\r_seven_solvers_five_r_v1\\r01\\m2_bank_01\\raw_trajectories.csv": "b4911b67d65bc05ec854c69f55c623735be957e71af1fb9000bfceee79b10862"
+  },
+  "row_count": 15120,
+  "rows_per_layout_condition": 36,
+  "run_id": "r01",
+  "runner_process_exit_code": 0,
+  "scope": "frozen_5040_reuse_plus_audited_10080_m2_bank",
+  "source_binding_sha256": "f16f483abae18010e3f1f2b9f32c64f54f198926ddcf92d96015fb81acf5ed97",
+  "source_bindings_file_sha256": "3ac525573c1d82556954bdef21d65162c1ead701fee184fb5d44fd38c54d5e44",
+  "source_origin_counts": {
+    "fixed_h_bank": 10080,
+    "historical_reuse": 5040
+  },
+  "source_stage_counts": {
+    "M0_REUSE": 5040,
+    "M2_BANK": 10080
+  },
+  "status": "PASS_MERGE_COMPLETE",
+  "synthetic_only": false,
+  "unique_key_count": 15120
+}

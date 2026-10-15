@@ -1,0 +1,29 @@
+{
+  "schema": "fixed_horizon_root_final_report_review_v1",
+  "protocol_id": "ridge_fixed_horizon_baselines_v1",
+  "run_id": "r01",
+  "status": "PASS_ROOT_FINAL_REPORT_CONTENT",
+  "reviewed_at_utc": "2026-10-15T01:25:01.7784502Z",
+  "report_path": "D:\\DSAI\\PAPER_CODE_RIDGE_BUNDLE\\experiments\\fixed_horizon_baselines_v1\\r01\\OUT\\FINAL_REPORT.md",
+  "report_file_sha256": "96bc5de92d33fdfcffaaeda6aa7bd9ae665de10dc9d43a435ce3cd59e9b185f8",
+  "checks": {
+    "main_claim_limited_to_three_noise_family_macro": true,
+    "clean_separate": true,
+    "equal_six_ratios_correct": true,
+    "five_equal_six_and_thirty_solver_comparisons_distinguished": true,
+    "universal_solver_superiority_not_claimed": true,
+    "development_best_h_selection_not_independent_confirmation": true,
+    "negative_clean_and_delayed_results_preserved": true,
+    "failed_stage_runs_and_reuse_accounting_preserved": true,
+    "cumulative_budgets_distinguished_from_single_process": true,
+    "exposed_twenty_layout_scope_explicit": true,
+    "analysis_draft_and_outputs_preserved": true
+  },
+  "evidence": [
+    "ROOT_M3_REVIEW.json",
+    "audit/ROOT_INDEPENDENT_STATISTICS_RECEIPT.json",
+    "audit/ROOT_FIGURE_REVIEW.json",
+    "ROOT_MERGE_REVIEW.json"
+  ],
+  "final_delivery_index_acceptance_pending": true
+}

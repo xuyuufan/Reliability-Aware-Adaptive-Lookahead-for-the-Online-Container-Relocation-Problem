@@ -1,0 +1,28 @@
+{
+  "status": "PASS_RELEASE_VALIDATION",
+  "date_local": "2026-10-15",
+  "python": "3.12.3 (tags/v3.12.3:f6650f9, Apr  9 2024, 14:05:25) [MSC v.1938 64 bit (AMD64)]",
+  "packages": {
+    "numpy": "2.4.4",
+    "matplotlib": "3.11.2",
+    "pytest": "8.3.4"
+  },
+  "statistics_self_tests": {
+    "passed": 10,
+    "failed": 0
+  },
+  "leveling_tests": {
+    "passed": 4,
+    "failed": 0
+  },
+  "python_files_syntax_parsed": 64,
+  "frozen_ridge_coefficients": 74,
+  "csv_tables_reproduced": 12,
+  "csv_cells_compared": 279760,
+  "maximum_csv_absolute_error": 0.0,
+  "visual_review": "Regenerated Ridge-vs-fixed-H simultaneous-interval PNG inspected; labels, intervals and zero reference readable",
+  "new_trajectories": 0,
+  "new_fits": 0,
+  "credential_pattern_scan": "No matches in selected text files; no environment/credential files included",
+  "files_at_or_above_50_mib": []
+}

@@ -1,0 +1,39 @@
+{
+  "all_six_solvers_beating_all_fixed_h_supported": false,
+  "analysis_budget_cap_seconds": 1800,
+  "budget_note": "all work inside ROOT active review window included; earlier inactive usage-limit wait excluded; outer M3 elapsed includes nested once",
+  "checked_numeric_fields": 56405,
+  "conservative_analysis_plus_root_review_seconds": 414.064615,
+  "conservative_root_active_review_window_seconds": 386.503051,
+  "equal6_supported_over_all_five_common_h": true,
+  "figure_review_file_sha256": "4ccf75da7f288b76bf4754654aa373dd7c8ab44ff37b146a361428521671ed36",
+  "independent_statistics_receipt_file_sha256": "03394090655442ece1d1aac5fc8ba232151ca7da164a83f2e3862a5adbb7cf8c",
+  "m3_actual_outer_process_seconds": 27.561564,
+  "m3_receipt_file_sha256": "ef92b696597e156a320b4628b452636392dad7d0e3a164c03c752eee47895e75",
+  "main_comparison_count": 35,
+  "max_absolute_error": 6.217248937900877e-14,
+  "merged_raw_sha256": "eb0ecc87c90a50cd7fb62b2fc0466babdc28ab9342151d7c804f8ca11977b906",
+  "ordinary_CLEAN_vs_H20_all_six_point_estimates_negative": true,
+  "protocol_id": "ridge_fixed_horizon_baselines_v1",
+  "review_sha256": "d62ddc8077e0e16b8857042961f1f1f1f431e88b0ddc62a52483a1fa99ce49ca",
+  "review_window_end_local": "2026-10-15T09:08:49.229980+08:00",
+  "review_window_start_local": "2026-10-15T09:02:22.726929+08:00",
+  "reviewer": "ROOT",
+  "run_id": "r01",
+  "same_development_best_h": {
+    "Chain": 20,
+    "EG": 20,
+    "EM": 20,
+    "ERI": 10,
+    "GP": 20,
+    "Minmax": 20
+  },
+  "scope": "M3 comparison complete; delivery report/index/acceptance pending",
+  "solvers_supported_over_all_five_h": [
+    "EG",
+    "Minmax"
+  ],
+  "source_binding_sha256": "f16f483abae18010e3f1f2b9f32c64f54f198926ddcf92d96015fb81acf5ed97",
+  "status": "PASS_ROOT_M3_STATISTICS_AND_VISUAL_REVIEW",
+  "technical_analysis_pass": true
+}

@@ -1,0 +1,100 @@
+{
+  "protocol_id": "r_seven_solvers_five_r_v1",
+  "run_id": "r01",
+  "plan": "R/docs/planning/PLAN_052_NEW_SOLVERS_ONLINE_FIVE_R.md",
+  "status": "REGISTERED_M1_PREPARATION",
+  "output": "R/output/r_seven_solvers_five_r_v1/r01",
+  "layout_source": "R/output/r_frozen_cross_solver_transfer_v1/r01/data/select20.json",
+  "solver_registry": {
+    "all": ["EM", "GP", "ERI", "EG", "RIL", "Chain", "Minmax"],
+    "new": ["RIL", "Chain", "Minmax"],
+    "old_reuse_only": ["EM", "GP", "ERI", "EG"],
+    "old_reuse_requires": [
+      "PLAN-051 M0_SOURCE_BINDINGS hashes still match",
+      "10,080 unique complete raw trajectory keys",
+      "FINAL_ACCEPTANCE ROOT_ACCEPTED_COMPLETE_COMPARISON / STOP",
+      "r04 independent raw physics/public audit PASS"
+    ]
+  },
+  "horizons": [0, 2, 5, 10, 20],
+  "unknown_public_rank": 22,
+  "empty_public_rank": 0,
+  "empty_stack_minmax_score": "max occupied public rank + 1; above unknown tail 22",
+  "policies": {
+    "all": [
+      "OLD_FROZEN_R",
+      "R_SOURCE_FULL",
+      "R_UTILITY_RIDGE",
+      "R_QUAD_H",
+      "R_ORDER_MAIN_TAU0_FULL",
+      "NATIVE20"
+    ],
+    "OLD_FROZEN_R": "Deduplicate by first action and keep its minimum requested-h source; frozen four-coefficient delta; H0 is the same-solver baseline/fallback and is replaced only for strict negative nonzero delta; preserve selector (delta,h) ties.",
+    "R_SOURCE_FULL": "Keep all five requested-h source rows including duplicate destinations; apply the frozen full-source selector; no EG group commitment.",
+    "R_UTILITY_RIDGE": "Shared frozen 74D Ridge; deduplicate first actions; same solver H20 is anchor; only a strict lower score replaces it; exact score ties retain anchor and lower alternatives tie by destination index.",
+    "R_QUAD_H": "Use frozen q-to-H quadratic rule and invoke only its selected horizon.",
+    "R_ORDER_MAIN_TAU0_FULL": "Shared frozen 20x5 rates; score the deduplicated pool of five native first actions plus one legal one-step risk proposal; tau=0; only a strict lower score replaces same-solver H20; score ties by destination index.",
+    "NATIVE20": "Call the same new solver at H=20.",
+    "model_input": "Public frame and action only; solver identity, proposal source, evaluator truth and private IDs are not model features.",
+    "group_commitment": "None for the three new solvers; every policy returns exactly one legal destination per decision."
+  },
+  "noise_protocol": {
+    "reuse_runner": "R/experiments/r_five_versions_comparison.py",
+    "condition_provider": "condition_specs()",
+    "forecast_provider": "_forecast_for()",
+    "forecast_seed_namespace": "unchanged PLAN-051 semantic forecast/time-window namespace",
+    "forecast_pairing": "One fixed forecast per layout-condition shared across all six new policies and three new solvers.",
+    "conditions_per_layout": 21,
+    "condition_ids_change": false
+  },
+  "counts": {
+    "layouts": 20,
+    "conditions_per_layout": 21,
+    "new_solvers": 3,
+    "policies_per_new_solver": 6,
+    "new_trajectories": 7560,
+    "old_reused_trajectories": 10080,
+    "merged_trajectories": 17640,
+    "smoke_trajectories": 9
+  },
+  "smoke": {
+    "layout": "G1:first in select20.json",
+    "condition_id": "delayed_positions|p=0.3|r=0",
+    "solvers": ["RIL", "Chain", "Minmax"],
+    "policies": ["NATIVE20", "R_UTILITY_RIDGE", "R_ORDER_MAIN_TAU0_FULL"],
+    "trajectory_count": 9
+  },
+  "budgets_seconds": {
+    "science_cumulative_including_smoke_failures": 7200,
+    "per_trajectory": 30,
+    "analysis": 1800
+  },
+  "statistics": {
+    "primary": "R_raw",
+    "secondary": "R_raw/N",
+    "overall_score": "Equal mean of seven within-solver macro R_raw improvement percentages; each method uses its own native H20 baseline.",
+    "layout_weight": "20 layout clusters are the statistical sampling unit.",
+    "noise_family_weight": "Three noisy families equally weighted; CLEAN reported separately.",
+    "bootstrap": {
+      "replicates": 10000,
+      "rng": "PCG64",
+      "seed": 202610145199,
+      "ordinary_ci": "two-sided 95% percentile",
+      "five_R_pairwise_familywise_ci": "Bonferroni simultaneous two-sided interval for 10 pairs; quantiles 0.0025 and 0.9975"
+    },
+    "winner_claim": "No unique overall winner without registered interval support."
+  },
+  "release_markers": {
+    "preparation": "R/output/r_seven_solvers_five_r_v1/r01/ROOT_M1_PREPARATION_RELEASE.json",
+    "smoke": "R/output/r_seven_solvers_five_r_v1/r01/ROOT_M1_SMOKE_RELEASE.json",
+    "bank": "R/output/r_seven_solvers_five_r_v1/r01/ROOT_M1_BANK_RELEASE.json"
+  },
+  "execution_boundary": {
+    "m1_preparation_can_run_synthetic_tests": true,
+    "smoke_requires_separate_root_release": true,
+    "bank_requires_smoke_review_and_separate_root_release": true,
+    "model_fit_or_refit": false,
+    "old_plan051_trajectories_rerun": false,
+    "science_run_authorized_by_this_config": false
+  }
+}

@@ -1,0 +1,4 @@
+# Statistics and figure reproduction; verified with Python 3.12.3.
+numpy==2.4.4
+matplotlib==3.11.2
+pytest==8.3.4

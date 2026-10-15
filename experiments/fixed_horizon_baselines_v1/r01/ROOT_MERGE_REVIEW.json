@@ -1,0 +1,13 @@
+{
+  "merge_receipt_file_sha256": "969ae53ad8a448d13d69d48241a80209da6b72180d0519cf9e72f28877bd67b8",
+  "merged_raw_sha256": "eb0ecc87c90a50cd7fb62b2fc0466babdc28ab9342151d7c804f8ca11977b906",
+  "paired_cells": 420,
+  "performance_scoring": false,
+  "review_sha256": "41f2521f79dd14ea2ed15efa88c8f0ac4947dacbdaf6bcfdb6b0e047752545af",
+  "reviewer": "ROOT",
+  "rows": 15120,
+  "slots_per_cell": 36,
+  "source_binding_sha256": "f16f483abae18010e3f1f2b9f32c64f54f198926ddcf92d96015fb81acf5ed97",
+  "source_rows_independently_checked": 15120,
+  "status": "PASS_ROOT_MERGE_READY_FOR_M3"
+}

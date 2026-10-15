@@ -1,0 +1,25 @@
+{
+  "best_fixed_h": {
+    "Chain": 20,
+    "EG": 20,
+    "EM": 20,
+    "ERI": 10,
+    "GP": 20,
+    "Minmax": 20
+  },
+  "bootstrap_replicates": 100000,
+  "bootstrap_seed": 202610155301,
+  "budget_cap_seconds": 1800,
+  "checked_numeric_fields": 56405,
+  "elapsed_seconds": 17.316691699998046,
+  "forecast_pairs": 420,
+  "main_comparisons": 35,
+  "max_absolute_error": 6.217248937900877e-14,
+  "merged_raw_sha256": "eb0ecc87c90a50cd7fb62b2fc0466babdc28ab9342151d7c804f8ca11977b906",
+  "merged_rows": 15120,
+  "prior_analysis_review_seconds": 26.43962639999679,
+  "production_analyzer_imported": false,
+  "receipt_sha256": "9117c995c6143c01522f8199b68a209dfc53cc058262ae89f6b1d59971a6f4b6",
+  "review_script_sha256": "c28915b03340c8ee513b384d63aae8c2975d42c262de27e4323f4d7e57fa3fe9",
+  "status": "PASS_ROOT_INDEPENDENT_STATISTICS"
+}

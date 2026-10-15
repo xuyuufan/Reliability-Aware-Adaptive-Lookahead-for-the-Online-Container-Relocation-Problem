@@ -1,0 +1,12 @@
+{
+  "N_matches_frozen_sequences": true,
+  "actual_forecasts_match_raw_hashes": true,
+  "initial_stacks_match_frozen_layouts": true,
+  "performance_scoring": false,
+  "private_labels_disclosed": false,
+  "reviewer": "ROOT",
+  "same_actual_forecast_in_420_pairs": true,
+  "status": "PASS_ROOT_M2_FROZEN_EPISODE_INPUT_REVIEW",
+  "trajectory_starts_verified": 10080,
+  "true_retrieval_sequences_match_frozen_layouts": true
+}

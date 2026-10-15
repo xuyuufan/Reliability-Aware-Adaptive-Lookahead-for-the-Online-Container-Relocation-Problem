@@ -1,0 +1,6 @@
+* -text
+*.png binary
+*.pdf binary
+*.gz binary
+
+# Preserve original bytes so archived SHA-256 receipts remain meaningful.

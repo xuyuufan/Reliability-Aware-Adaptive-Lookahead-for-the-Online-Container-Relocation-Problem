@@ -1,0 +1,47 @@
+{
+  "clean_vs_h20_point_improvements": {
+    "Chain": -7.770961145194284,
+    "EG": -5.091649694501018,
+    "EM": -11.08786610878662,
+    "ERI": -5.461393596986815,
+    "GP": -8.995815899581585,
+    "Minmax": -9.832635983263605
+  },
+  "limitations": [
+    "fixed-H relocation curve shows ordinary95% mean intervals and Ridge point reference; use paired simultaneous contrast figure for primary inference"
+  ],
+  "pdfs": {
+    "CLEAN_RESULTS.pdf": {
+      "embedded_bitmap_images": 0,
+      "method": "pypdf",
+      "pages": 1,
+      "sha256": "2d09d2dce4720df1b6c564adefb14ae990e80753d9705103d8ce4142b8e94f26"
+    },
+    "FAMILY_RESULTS_FACETS.pdf": {
+      "embedded_bitmap_images": 0,
+      "method": "pypdf",
+      "pages": 1,
+      "sha256": "52153df04fbb524c108095a956d1ecfd5044ab2482e79790b5e38d6116f31242"
+    },
+    "FIXED_H_RRAW_BY_SOLVER.pdf": {
+      "embedded_bitmap_images": 0,
+      "method": "pypdf",
+      "pages": 1,
+      "sha256": "36942517e32a4efd6a75548f1c917f1fd6f42cd4ee94aa1448283aa0249383e8"
+    },
+    "RIDGE_VS_FIXED_H_SIMULTANEOUS.pdf": {
+      "embedded_bitmap_images": 0,
+      "method": "pypdf",
+      "pages": 1,
+      "sha256": "0d1c77430aa33c5f6038cb24a228a26ebd0be0c6ef67c23185e8155b7fa23ae2"
+    }
+  },
+  "png_checks": [
+    "axes, labels and numeric H spacing legible",
+    "zero references and negative/uncertain intervals retained",
+    "per-solver/family/CLEAN scopes correctly labeled",
+    "CSV plotting values independently reconstructed"
+  ],
+  "pngs_visually_inspected": 4,
+  "status": "PASS_ROOT_FIGURE_REVIEW"
+}

@@ -1,0 +1,66 @@
+{
+  "protocol_id": "r_five_versions_comparison_v1",
+  "run_id": "r01",
+  "plan": "R/docs/planning/PLAN_051_FIVE_R_FOUR_SOLVERS_COMPARISON.md",
+  "output": "R/output/r_five_versions_comparison_v1/r01",
+  "layouts": {
+    "source": "R/output/r_frozen_cross_solver_transfer_v1/r01/data/select20.json",
+    "expected_count": 20,
+    "geometry_counts": {"G1": 10, "G2": 10},
+    "development_data_only": true
+  },
+  "conditions": {
+    "family_order": ["subset_shuffle", "delayed_positions", "time_window_shuffle", "CLEAN"],
+    "subset_shuffle": {"p": [0.1, 0.3, 0.5], "repeats": [0, 1]},
+    "delayed_positions": {"p": [0.1, 0.3, 0.5], "repeats": [0, 1]},
+    "time_window_shuffle": {"window_size": [2, 5, 10, 20], "repeats": [0, 1]},
+    "clean_count": 1,
+    "unique_per_layout": 21,
+    "forecast_shared_across_policies_and_solvers": true,
+    "p_zero_and_window_one_are_clean_aliases": true
+  },
+  "candidates": [
+    {"id": "OLD_FROZEN_R", "source": "PLAN-038/044 frozen adapter", "fixed_artifact": null},
+    {"id": "R_SOURCE_FULL", "source": "PLAN-041 full-source rule", "fixed_artifact": "R/scrp/history_reliability_r.py"},
+    {"id": "R_UTILITY_RIDGE", "source": "PLAN-047 frozen Ridge", "fixed_artifact": "R/output/universal_r_utility_v1/r02/M1_FIT_01/RIDGE_MODEL.json"},
+    {"id": "R_QUAD_H", "source": "PLAN-048 frozen quadratic q-to-H rule", "fixed_artifact": "R/scrp/r_horizon_robustness.py"},
+    {"id": "R_ORDER_MAIN_TAU0_FULL", "source": "PLAN-049 fixed main model, registered tau 0, full risk proposal", "fixed_artifact": "R/output/r_order_v1/r01/M1_MODELS.json"},
+    {"id": "NATIVE20", "source": "same-solver native H20 baseline", "fixed_artifact": null}
+  ],
+  "algorithms": ["EM", "GP", "ERI", "EG"],
+  "trajectory_count": 10080,
+  "smoke": {
+    "layouts": ["G1:first"],
+    "condition": {"family": "delayed_positions", "p": 0.3, "repeat": 0},
+    "candidates": ["OLD_FROZEN_R", "R_UTILITY_RIDGE", "R_ORDER_MAIN_TAU0_FULL"],
+    "algorithms": ["EM", "GP", "ERI", "EG"],
+    "trajectory_count": 12
+  },
+  "statistics": {
+    "primary": "R_raw",
+    "secondary": "R_raw/N",
+    "resampling_unit": "layout",
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 202610145199,
+    "overall_score": "equal mean of four within-solver macro R_raw improvement percentages",
+    "winner_pairwise_one_sided_alpha": 0.0025
+  },
+  "budgets": {
+    "science_wall_seconds": 7200,
+    "trajectory_wall_seconds": 30,
+    "analysis_wall_seconds": 1800
+  },
+  "release_markers": {
+    "smoke": "R/output/r_five_versions_comparison_v1/r01/ROOT_M1_SMOKE_RELEASE.json",
+    "bank": "R/output/r_five_versions_comparison_v1/r01/ROOT_M1_BANK_RELEASE.json"
+  },
+  "actor_boundary": {
+    "evaluator_condition_metadata_visible": false,
+    "true_retrieval_sequence_visible": false,
+    "forecast_visible": false,
+    "physical_private_state_visible": false,
+    "gp_noisy_rank_fast_path": false,
+    "eg_full_plan_commitment": true,
+    "require_public_crane_position_and_time": true
+  }
+}

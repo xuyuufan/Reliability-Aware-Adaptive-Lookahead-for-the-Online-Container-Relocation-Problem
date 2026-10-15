@@ -1,0 +1,88 @@
+{
+  "algorithm_policy_groups": {
+    "Chain/FIXED_H20": 420,
+    "Chain/RIDGE": 420,
+    "EG/FIXED_H20": 420,
+    "EG/RIDGE": 420,
+    "EM/FIXED_H20": 420,
+    "EM/RIDGE": 420,
+    "ERI/FIXED_H20": 420,
+    "ERI/RIDGE": 420,
+    "GP/FIXED_H20": 420,
+    "GP/RIDGE": 420,
+    "Minmax/FIXED_H20": 420,
+    "Minmax/RIDGE": 420
+  },
+  "audit_inputs_verified": 29,
+  "current_plan_sha256": "b9ed06aeeecf921d4a9b80e308e792a57aaf0626ed83d90f1214fe51d52f5f86",
+  "exit_code": 0,
+  "historical_audits": {
+    "PLAN-051": {
+      "native20_EG_full_committed_sequence_trace_visible": false,
+      "path": "D:\\DSAI\\containter_new\\R\\output\\r_five_versions_comparison_v1\\r01\\analysis\\bank_raw_physics_public_audit_r04.json",
+      "physical_step_records": 296884,
+      "public_trace_records": 296884,
+      "reconstruction_method": "rebuild each native20 EG plan from its frozen public group-start frame using the binding-pinned build_eg20_plan; check every reconstructed action and group boundary; this is a frozen strategy replay, not an independent EG implementation",
+      "sha256": "e6c602d522536dc997a872e63aecd5b8031ab2ff144bf2b04ee4793665f62f87",
+      "status": "PASS",
+      "trajectories": 10080
+    },
+    "PLAN-052": {
+      "new_public_trace_records": 233821,
+      "new_trajectories": 7560,
+      "path": "D:\\DSAI\\containter_new\\R\\output\\r_seven_solvers_five_r_v1\\r01\\analysis\\bank_raw_physics_public_audit.json",
+      "reused_PLAN051_rows": 10080,
+      "sha256": "36fdded81bac9bab0bf0472916df237544483b14ce3350b6a5dd0694b580d95f",
+      "status": "PASS"
+    }
+  },
+  "historical_binding_checks": {
+    "PLAN-051_sources": 38,
+    "PLAN-052_active_sources": 31,
+    "PLAN-052_inherited_sources": 38,
+    "mismatches": 0
+  },
+  "historical_science_status": {
+    "PLAN-051": "ROOT_ACCEPTED_COMPLETE_COMPARISON",
+    "PLAN-052": "ROOT_ACCEPTED_COMPLETE_COMPARISON",
+    "current_internal_stage_release": false,
+    "new_science_authorized_by_user_within_plan": true
+  },
+  "layout_condition_cells": 420,
+  "models_currently_match": true,
+  "package_manifest_mismatches": 0,
+  "package_manifest_rows": 87,
+  "package_manifest_sha256": "f03d2cd859d88cea8db9c1721a4bf937b0587d617b2e97439d0a65fc8ab211ee",
+  "package_manifest_targets_verified": 87,
+  "pairing_checks": {
+    "complete": true,
+    "duplicates": 0,
+    "missing_slots": 0,
+    "within_cell_N_seed_F_mismatches": 0,
+    "within_solver_RIDGE_H20_metadata_mismatches": 0
+  },
+  "phase": "M0_REUSE_AUDIT",
+  "plan_status": "USER_AUTHORIZED / M0_IN_PROGRESS",
+  "protocol_id": "ridge_fixed_horizon_baselines_v1",
+  "raw_tables_copied": false,
+  "receipt_sha256": "042adfa8094ebe473e83712aa6d87af97424c66725925ac234e44f13cb506e4f",
+  "reuse_map_path": "D:\\DSAI\\PAPER_CODE_RIDGE_BUNDLE\\experiments\\fixed_horizon_baselines_v1\\r01\\preparation\\REUSE_MAP.csv",
+  "reuse_map_sha256": "8444c1fc22613dbe65ddc158a05365a4b24ae5f878bc003fb5ca5c928234376c",
+  "reused_rows": 5040,
+  "rows_per_cell": 12,
+  "run_id": "r01",
+  "source_binding_sha256": "f16f483abae18010e3f1f2b9f32c64f54f198926ddcf92d96015fb81acf5ed97",
+  "source_paths_currently_match": true,
+  "status": "PASS_M0_REUSE_ELIGIBLE_AWAITING_ROOT_REVIEW",
+  "timing": {
+    "M0_synthetic_budget_cap_seconds": 1800,
+    "M0_synthetic_budget_used_seconds": 0,
+    "model_fit_or_tuning": false,
+    "python_elapsed_seconds": 0.722612,
+    "real_traces_run": 0,
+    "science_budget_used_seconds": 0,
+    "science_trajectories": 0
+  },
+  "trace_files_copied": false,
+  "unique_reuse_slots": 5040
+}

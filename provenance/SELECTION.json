@@ -1,0 +1,22 @@
+{
+  "source_bundle": "D:/DSAI/PAPER_CODE_RIDGE_BUNDLE",
+  "source_file_count": 654,
+  "source_bytes": 91388051,
+  "retained_source_files": 155,
+  "excluded_source_files": 499,
+  "source_bundle_modified": false,
+  "local_excluded_files_deleted": false,
+  "scope": "Six solver Ridge-R adapter and accepted fixed-horizon evidence; standalone Leveling baseline",
+  "policy": [
+    "Keep frozen dependency snapshot, final model, layouts, trajectory-level observations, accepted bridge/smoke/bank traces, all final tables and figures, and final receipts",
+    "Exclude preparation attempt history, repeated process logs, duplicate top-level algorithm exports, obsolete handoff pages and RIL-dependent suites",
+    "Keep archived scientific negative and unresolved results, and engineering failure accounting in final ledger",
+    "Provide portable statistical reanalysis; do not claim full historical bank rerun"
+  ],
+  "manifest_excludes": [
+    "Its own SHA-256",
+    "Git internals",
+    "Reproduced copies",
+    "Python caches"
+  ]
+}
